@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Roboto&display=swap');
+
+// Colors
+$WHITE: #FFF;
+$WHITE_OPACITY: rgba(255, 255, 255, 0.4);
+$BLACK: #000;
+$YELLOW: #F0F812;
+$ORANGE: #FF4848;
+$RED: #E0655F;
+
+// Fonts
+$THIRD_RAIL: "third_rail_-_demoregular";
+$BARLOW: "Barlow", sans-serif;
+$ROBOTO: "Roboto", sans-serif;
+
+@include font-face($THIRD_RAIL, "third_rail_-_demoregular");

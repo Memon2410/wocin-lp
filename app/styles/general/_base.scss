@@ -1,0 +1,34 @@
+:root {
+    font-size: 62.5%;     
+}
+
+.no-select {
+    @include prefix(user-select, none);  
+}
+
+.hidden {
+    display: none;      
+}
+
+body {
+     @include flexbox(); 
+    min-height: 100vh;
+    @include prefix(box-orient, vertical);
+    @include prefix(flex-direction, column);
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;  
+    background: $WHITE;
+
+    .general__container {
+        width: 100%;
+        position: relative;
+
+        .general__content {
+            width: 95%;
+            max-width: 1280px;
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+}
+

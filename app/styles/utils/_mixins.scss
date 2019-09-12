@@ -1,3 +1,14 @@
+// Import fonts
+@mixin font-face($font-name, $font-file-name) {
+  @font-face {
+    font-family: $font-name;
+    src: url("../fonts/" + $font-file-name + ".woff") format("woff");
+    src: url("../fonts/" + $font-file-name + ".woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
 // Prefixes
 $prefixes: "webkit", "moz", "ms", "o", "none";
 @mixin prefix($property, $value) {

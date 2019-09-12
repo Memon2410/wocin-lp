@@ -1,0 +1,80 @@
+header {
+    width: 100%;
+    height: 10.5rem;
+    position: relative;
+    background: $WHITE;
+
+    .item--header {
+        width: 32%;
+        height: 8.5rem;
+        position: relative;
+        margin: 1rem 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .hamburger--header {
+        text-align: left;
+
+        span {
+            width: 2.25rem;
+            height: 0.5rem;
+            position: relative;
+            display: block;
+            background: $BLACK;
+
+            &:first-child {
+                margin-top: 2.5rem;
+            }
+            &:nth-child(2) {
+                margin: 0.3rem 0;
+            }
+        }
+    }
+    .container__logo--header {
+        text-align: center;
+
+        img {
+            width: 12rem;
+        }
+    }
+    .container__social--header {
+        text-align: right;
+        a {
+            text-decoration: none;
+            img {
+                width: 2rem;
+            }
+        }
+    }
+
+    nav {
+        position: fixed;
+        top: 6.5rem;
+        left: 0;
+        background: rgba(255, 255, 255, 0.9);
+
+        ul {
+            li {
+                width: 14rem;
+                text-align: center;
+                button {
+                    width: 12.5rem;
+                    height: 3.5rem;
+                    font-family: $BARLOW;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    text-transform: uppercase; 
+                }
+
+                &:nth-child(2)  {
+                    button {
+                        border: solid $BLACK;
+                        border-width: 0.1rem 0 0.1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
