@@ -6,7 +6,7 @@ To collaborate the main commands are:
 
 - Installation of project dependencies, use [yarn](https://yarnpkg.com/) over npm.
 ```
-yarn install
+yarn
 ```
 - Live reload and create server
 ```
