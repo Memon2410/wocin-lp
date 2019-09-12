@@ -4,7 +4,7 @@
   "private": true,
   "author": "Memon2410",
   "version": "0.0.1",
-  "repository": "",
+  "repository": "https://github.com/Memon2410/wocin-lp.git",
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build --production"
