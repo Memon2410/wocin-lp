@@ -1,6 +1,6 @@
 ## WÖCin
 
-Frontend for the WÖCin landing page, developed with **Brunch**, since it was built with two things in mind *speed* and *simplicity*. In [brunch.io](https://brunch.io) you can find more documentation. To the face tracking we used [Jeeliz](https://jeeliz.com/)
+Frontend for the WÖCin landing page, developed with **Brunch**, since it was built with two things in mind *speed* and *simplicity*. In [brunch.io](https://brunch.io) you can find more documentation.
 
 To collaborate the main commands are:
 
