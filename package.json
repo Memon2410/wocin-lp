@@ -1,0 +1,28 @@
+{
+  "name": "WOCin",
+  "description": "WOCin landing page",
+  "private": true,
+  "author": "Memon2410",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "babel-preset-stage-0": "^6.24.1",
+    "gsap": "^2.1.3",
+    "json-brunch": "^1.5.4"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel": "^6.23.0",
+    "babel-brunch": "~6.0",
+    "babel-preset-latest": "^6",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "sass-brunch": "^2.10.8",
+    "uglify-js-brunch": "^2"
+  }
+}
