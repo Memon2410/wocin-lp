@@ -1,9 +1,67 @@
 .hero {
     min-height: 24rem;
+    margin-top: 3rem;
+
+    .general__content {
+        max-width: 102.4rem !important;
+        min-height: 24rem;
+    }
+    .container__text--hero {
+        width: 50%;
+        max-width: 26rem;
+        position: absolute;
+        top: 50%;
+        @include prefix(transform, translateY(-50%));
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weigth: 300;
+        }
+    }
+
+    picture {
+        width: auto;
+        height: 115%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        img {
+            height: 100%;
+        }
+    }
 }
 
 @media screen and (min-width: 48rem) {
     .hero {
         min-height: 44rem;
+
+        .general__content {
+            min-height: 44rem;
+        }
+
+        .container__text--hero {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
+
