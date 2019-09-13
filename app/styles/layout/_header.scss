@@ -6,7 +6,7 @@ header {
     z-index: 10;
 
     .item--header {
-        width: 32.9%;
+        width: 49.5%;
         height: 8.5rem;
         position: relative;
         margin: 1rem 0;
@@ -33,6 +33,12 @@ header {
         }
     }
     .container__logo--header {
+        @include prefix(width, fit-content);
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 1rem;
         text-align: center;
 
         img {
