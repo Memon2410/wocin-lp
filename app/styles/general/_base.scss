@@ -32,3 +32,28 @@ body {
     }
 }
 
+h2 {
+    font-family: $THIRD_RAIL;
+    font-size: 3.6rem;
+}
+
+.font-barlow {
+    font-family: $BARLOW;
+}
+
+.font-roboto {
+    font-family: $ROBOTO;
+}
+
+.tiny-text {
+    font-size: 0.6rem;
+}
+
+@media screen and (min-width: 48rem) {
+    h2 {
+        font-size: 5.5rem;
+    }
+    .tiny-text {
+        font-size: 1rem;
+    } 
+}

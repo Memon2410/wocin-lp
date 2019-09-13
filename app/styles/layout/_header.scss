@@ -3,9 +3,10 @@ header {
     height: 10.5rem;
     position: relative;
     background: $WHITE;
+    z-index: 10;
 
     .item--header {
-        width: 32%;
+        width: 32.9%;
         height: 8.5rem;
         position: relative;
         margin: 1rem 0;
@@ -44,12 +45,14 @@ header {
             text-decoration: none;
             img {
                 width: 2rem;
+                vertical-align: middle;
             }
         }
     }
 
     nav {
-        position: fixed;
+        display: none;
+        position: absolute;
         top: 6.5rem;
         left: 0;
         background: rgba(255, 255, 255, 0.9);
@@ -61,7 +64,6 @@ header {
                 button {
                     width: 12.5rem;
                     height: 3.5rem;
-                    font-family: $BARLOW;
                     font-size: 1.4rem;
                     text-align: center;
                     text-transform: uppercase; 
@@ -75,6 +77,42 @@ header {
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    header {
+        height: 17.5rem;
+
+        .hamburger--header {
+            span {
+                width: 3.2rem;
+                height: 0.7rem;
+            }
+        }
+
+        .container__logo--header {
+            img {
+                width: 17.8rem;
+                margin-top: 3rem;
+            }
+        }
+
+        .container__social--header {
+            margin-top: 3rem;
+
+            a {
+                img {
+                    width: 3rem;
+                    margin: 0 0.25rem;
+                }
+            }
+        }
+
+        nav {
+            top: 7.5rem;
+        }
+
     }
 }
 
