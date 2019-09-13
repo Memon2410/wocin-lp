@@ -30,6 +30,11 @@ body {
             margin: 0 auto;
         }
     }
+
+    section {
+        width: 100%;
+        position: relative;
+    }
 }
 
 h2 {
@@ -47,6 +52,14 @@ h2 {
 
 .tiny-text {
     font-size: 0.6rem;
+}
+
+.section-yellow {
+    background: $YELLOW;
+}
+
+.section-black {
+    background: $BLACK;
 }
 
 @media screen and (min-width: 48rem) {

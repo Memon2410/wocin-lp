@@ -1,0 +1,10 @@
+.form {
+    min-height: 66rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .form {
+        min-height: 86rem;
+    }
+}
+

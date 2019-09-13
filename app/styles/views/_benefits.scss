@@ -1,0 +1,10 @@
+.benefits {
+    min-height: 55rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .benefits {
+        min-height: 68rem;
+    }
+}
+

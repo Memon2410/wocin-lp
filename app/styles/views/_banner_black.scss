@@ -1,0 +1,10 @@
+.banner__black {
+    min-height: 7rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .banner__black {
+        min-height: 8rem;
+    }
+}
+
