@@ -4,13 +4,14 @@
     .general__content {
         padding: 1.5rem 0;
         .container__text--banner {
-            width: 49%;
+            width: 65%;
             position: relative;
             display: inline-block;
             vertical-align: middle;
 
             p {
                 font-size: 1.4rem;
+                line-height: 2rem;
                 text-align: center;
                 color: $WHITE;
                 span {
@@ -20,15 +21,28 @@
         }
 
         .container__button {
-            width: 49%;
+            width: 24%;
             position: relative;
             display: inline-block;
             vertical-align: middle;
             text-align: right;
 
             .cta-button {
-                width: 11.5rem;
+                width: 11rem;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .banner__black {
+        .container__text--banner,
+        .container__button {
+            width: 49%;
+        }
+
+        .cta-button {
+            width: 12rem;
         }
     }
 }
@@ -40,6 +54,7 @@
         .general__content {
             p {
                 font-size: 2rem !important;
+                line-height: 2.5rem !important;
             }
             .cta-button {
                 width: 21rem !important;

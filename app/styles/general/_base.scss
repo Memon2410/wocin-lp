@@ -11,13 +11,17 @@
 }
 
 body {
-     @include flexbox(); 
+    @include flexbox(); 
     min-height: 100vh;
     @include prefix(box-orient, vertical);
     @include prefix(flex-direction, column);
     -webkit-overflow-scrolling: touch;
-    -webkit-font-smoothing: antialiased;  
+    -webkit-font-smoothing: antialiased;
     background: $WHITE;
+
+    .wrapper {
+        overflow: hidden;
+    }
 
     .general__container {
         width: 100%;

@@ -1,8 +1,101 @@
 .style {
-    min-height: 68rem;
+    min-height: 75rem;
 
     .container--title__style {
-        min-height: 16rem;
+        min-height: 18rem;
+
+        h2 {
+            padding: 1.5rem 0 1rem;
+            text-align: center;
+        }
+
+        .container__logo--style {
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            width: 90%;
+            max-width: 58rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin: 1rem auto;
+        }
+    }
+
+    .container--icons__style {
+        .container__grid--style {
+            width: 100%;
+            position: relative;
+            padding: 2rem 0;
+
+            .item__grid--style {
+                width: 49%;
+                height: 17rem;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 4rem;
+                text-align: center;
+
+                .text__grid--style {
+                    width: 12rem;
+                    margin: 0 auto 2.5rem;
+                    padding-left: 0.5rem;
+                    font-size: 1rem;
+                    text-align: left;
+                    border-left: 0.9rem solid $YELLOW;
+
+                    span {
+                        font-weight: 900;
+                    }
+                }
+
+                .img__grid--style {
+                    width: 8.8rem;
+                    height: 8.8rem;
+                    position: relative;
+                    margin: 0 auto;
+                    border: 0.7rem solid $BLACK;
+                    border-radius: 50%;
+                    background: $YELLOW;
+                    
+                    img {
+                        width: auto;
+                        height: 4.6rem;
+                        position: absolute;
+                        margin: auto;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        .container__button {
+            margin: 1rem auto;
+            text-align: center;
+
+            .cta-button {
+                width: 80%;
+                max-width: 38.5rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .style {
+        .container--title__style {
+            min-height: 20rem;
+            p {
+                width: 80%;
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+        }
     }
 }
 
@@ -11,7 +104,16 @@
         min-height: 94rem;
 
         .container--title__style {
-            min-height: 21rem;
+            min-height: 23rem;
+
+            h2 {
+                padding: 2rem 0 1rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+            }
         }
     }
 }
