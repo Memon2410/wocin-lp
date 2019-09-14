@@ -25,7 +25,7 @@ body {
 
         .general__content {
             width: 95%;
-            max-width: 1280px;
+            max-width: 102.4rem;
             position: relative;
             margin: 0 auto;
         }
@@ -40,6 +40,7 @@ body {
 h2 {
     font-family: $THIRD_RAIL;
     font-size: 3.6rem;
+    text-align: center;
 }
 
 .font-barlow {
@@ -62,7 +63,9 @@ h2 {
     background: $BLACK;
 }
 
-button {
+.cta-button {
+    width: 80%;
+    max-width: 30rem;
     padding: 1rem;
     border-radius: 0.3rem;
     font-weight: 900;
@@ -77,5 +80,8 @@ button {
     }
     .tiny-text {
         font-size: 1rem;
-    } 
+    }
+    .cta-button {
+        font-size: 2.2rem;
+    }
 }
