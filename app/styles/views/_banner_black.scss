@@ -1,10 +1,50 @@
 .banner__black {
     min-height: 7rem;
+
+    .general__content {
+        padding: 1.5rem 0;
+        .container__text--banner {
+            width: 49%;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+
+            p {
+                font-size: 1.4rem;
+                text-align: center;
+                color: $WHITE;
+                span {
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .container__button {
+            width: 49%;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+
+            .cta-button {
+                width: 11.5rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 48rem) {
     .banner__black {
         min-height: 8rem;
+
+        .general__content {
+            p {
+                font-size: 2rem !important;
+            }
+            .cta-button {
+                width: 21rem !important;
+            }
+        }
     }
 }
 
