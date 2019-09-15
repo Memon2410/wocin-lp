@@ -9544,6 +9544,9 @@ var _register2 = _interopRequireDefault(_register);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Utils
+// import Auxiliar from './utils/auxiliar'
+
 // Components
 document.addEventListener('DOMContentLoaded', function () {
   var datePicker = new _datePicker2.default();
@@ -9557,7 +9560,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Dependencies
 });
 
-;require.register("functions/views/register.js", function(exports, require, module) {
+;require.register("functions/utils/auxiliar.js", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9568,15 +9571,70 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Auxiliar = function () {
+  function Auxiliar() {
+    _classCallCheck(this, Auxiliar);
+  }
+
+  _createClass(Auxiliar, [{
+    key: 'clearSelect',
+    value: function clearSelect(select) {
+      select.options.length = 0;
+    }
+  }, {
+    key: 'addOptions',
+    value: function addOptions(options, select) {
+      for (var i = 0; i < options.length; i++) {
+        var opt = document.createElement('option');
+        opt.value = options[i];
+        opt.innerHTML = options[i];
+        if (i === 0) {
+          opt.disabled = true;
+          opt.selected = true;
+        }
+        select.appendChild(opt);
+      }
+    }
+  }]);
+
+  return Auxiliar;
+}();
+
+exports.default = Auxiliar;
+});
+
+;require.register("functions/views/register.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _auxiliar = require('../utils/auxiliar');
+
+var _auxiliar2 = _interopRequireDefault(_auxiliar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var Register = function () {
   function Register() {
     _classCallCheck(this, Register);
 
+    var that = this;
+    this.auxiliar = new _auxiliar2.default();
     this.states = ['Selecciona un estado', 'Área Metropolitana', 'CDMX', 'Jalisco', 'Puebla', 'Querétaro', 'Sonora', 'Yucatán'];
-    this.myobject = {
-      ValueA: 'Text A',
-      ValueB: 'Text B',
-      ValueC: 'Text C'
+    this.cities = {
+      'Área Metropolitana': ['Selecciona una ciudad', 'Metropolitana 1', 'Área Metropolitana 2', 'Área Metropolitana 3'],
+      'CDMX': ['Selecciona una ciudad', 'CDMX 1', 'CDMX 2', 'CDMX 3', 'CDMX 4', 'CDMX 5'],
+      'Jalisco': ['Selecciona una ciudad', 'Jalisco 1', 'Jalisco 2'],
+      'Puebla': ['Selecciona una ciudad', 'Puebla 1', 'Puebla 2'],
+      'Querétaro': ['Selecciona una ciudad', 'Querétaro 1', 'Querétaro 2'],
+      'Sonora': ['Selecciona una ciudad', 'Sonora 1'],
+      'Yucatán': ['Selecciona una ciudad', 'Yucatán']
     };
   }
 
@@ -9586,17 +9644,16 @@ var Register = function () {
       console.log('register');
       var that = this;
       var select = document.getElementById('input-state');
+      var selectCity = document.getElementById('input-city');
 
-      for (var i = 0; i < this.states.length; i++) {
-        var opt = document.createElement('option');
-        opt.value = this.states[i];
-        opt.innerHTML = this.states[i];
-        if (i === 0) {
-          opt.disabled = true;
-          opt.selected = true;
-        }
-        select.appendChild(opt);
-      }
+      this.auxiliar.addOptions(this.states, select);
+
+      select.onchange = function (event) {
+        that.auxiliar.clearSelect(selectCity);
+        setTimeout(function () {
+          that.auxiliar.addOptions(that.cities[event.target.value], selectCity);
+        }, 500);
+      };
     }
   }]);
 
