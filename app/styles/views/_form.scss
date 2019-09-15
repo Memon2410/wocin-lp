@@ -29,7 +29,7 @@
                 background: $WHITE_OPACITY;
             }
 
-            input {
+            input[type=text] {
                 width: calc(100% - 2rem);
             }
 
@@ -41,6 +41,26 @@
             }
 
         }
+
+        .container__terms {
+            width: 85%;
+            max-width: 60rem;
+            margin: 2rem auto 1rem;
+            font-family: $ROBOTO;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .container__button {
+            margin: 2rem auto;
+            text-align: center;
+
+            input[type=submit] {
+                width: 12rem;
+                font-size: 2rem;
+                padding: 1rem 2rem;
+            }
+        }
     }
 }
 
@@ -48,10 +68,6 @@
     .form {
         padding: 5.5rem 0 4rem;
         min-height: 86rem;
-
-        form {
-
-        }
     }
 }
 

@@ -31,9 +31,9 @@
       <div class="general__container">
           <div class="general__content">
               <div class="hamburger--header item--header">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span class="stroke--menu"></span>
+                  <span class="stroke--menu"></span>
+                  <span class="stroke--menu"></span>
               </div>
 
               <h1 class="container__logo--header">
@@ -52,13 +52,13 @@
               <nav>
                   <ul>
                       <li>
-                          <button class="no-select font-barlow">Beneficios</button>
+                          <a href="#benefits" class="no-select font-barlow">Beneficios</a>
                       </li>
                       <li>
-                          <button class="no-select font-barlow">Nuestro estilo</button>
+                          <a href="#style" class="no-select font-barlow">Nuestro estilo</a>
                       </li>
                       <li>
-                          <button class="no-select font-barlow">¡Únete al reto!</button>
+                          <a href="#form" class="no-select font-barlow">¡Únete al reto!</a>
                       </li>
                   </ul>
               </nav>
@@ -92,7 +92,7 @@
           </div>
       </section>
 
-      <section class="benefits">
+      <section class="benefits" id="benefits">
           <div class="general__container">
               <div class="general__content">
                   <h2>Beneficios</h2>
@@ -163,7 +163,7 @@
           </div>
       </section>
 
-      <section class="style">
+      <section class="style" id="style">
           <div class="container--title__style section-yellow">
               <div class="general__container">
                   <div class="general__content">
@@ -231,7 +231,7 @@
           </div>
       </section>
 
-      <section class="form section-yellow">
+      <section class="form section-yellow" id="form">
           <div class="general__container">
               <div class="general__content">
                   <h2>Estas a un paso</h2>
@@ -262,7 +262,13 @@
                       <label class="font-barlow" for="input-city">*Ciudad</label>
                       <select class="input-form input-select font-roboto" id="input-city" name="input-city" required></select>
                     </div>
-                      
+                    <div class="container__terms">
+                        <input type="checkbox" class="font-roboto" id="terms" name="terms" value="terms"> ACEPTO TÉRMINOS Y CONDICIONES
+                    </div>
+
+                    <div class="container__button">
+                      <input type="submit" value="ENVIAR" class="font-barlow">
+                    </div>
 
                   </form>
               </div>

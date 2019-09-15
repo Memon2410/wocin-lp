@@ -9538,26 +9538,142 @@ var _datePicker = require('./components/datePicker');
 
 var _datePicker2 = _interopRequireDefault(_datePicker);
 
+var _menu = require('./layout/menu');
+
+var _menu2 = _interopRequireDefault(_menu);
+
 var _register = require('./views/register');
 
 var _register2 = _interopRequireDefault(_register);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Utils
-// import Auxiliar from './utils/auxiliar'
-
-// Components
+// Layout
+// Dependencies
 document.addEventListener('DOMContentLoaded', function () {
   var datePicker = new _datePicker2.default();
+  var menu = new _menu2.default();
   var register = new _register2.default();
 
   datePicker.initDatePicker();
+  menu.initMenu();
   register.initRegister();
 });
 
 // Views
-// Dependencies
+
+
+// Components
+});
+
+;require.register("functions/layout/menu.js", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Menu = function () {
+  function Menu() {
+    _classCallCheck(this, Menu);
+
+    this.visibleNav = false;
+  }
+
+  _createClass(Menu, [{
+    key: 'initMenu',
+    value: function initMenu() {
+      var _this = this;
+
+      var menuBtn = document.getElementsByClassName('hamburger--header')[0];
+      var menu = document.getElementsByTagName('nav')[0];
+      var strokes = document.getElementsByClassName('stroke--menu');
+
+      TweenLite.to(menu, 0, {
+        x: -120,
+        alpha: 0
+      });
+
+      var openMenu = function openMenu() {
+        var posY = window.innerWidth < 768 ? [7, -8] : [9, -10];
+
+        menu.style.display = 'block';
+        TweenLite.to(menu, 1, {
+          x: 0,
+          alpha: 1,
+          ease: Power2.easeOut
+        });
+
+        TweenLite.to(strokes[1], 1, {
+          alpha: 0,
+          ease: Power2.easeOut
+        });
+
+        TweenLite.to(strokes[0], 1, {
+          y: posY[0],
+          rotation: 45,
+          ease: Power2.easeOut
+        });
+        TweenLite.to(strokes[2], 1, {
+          y: posY[1],
+          rotation: -45,
+          ease: Power2.easeOut
+        });
+      };
+
+      var closeMenu = function closeMenu() {
+        TweenLite.to(menu, 1, {
+          x: -120,
+          alpha: 0,
+          ease: Power2.easeOut
+        });
+        TweenLite.to(strokes[1], 1, {
+          alpha: 1,
+          ease: Power2.easeOut
+        });
+        TweenLite.to(strokes[0], 1, {
+          y: 0,
+          rotation: 0,
+          ease: Power2.easeOut
+        });
+        TweenLite.to(strokes[2], 1, {
+          y: 0,
+          rotation: 0,
+          ease: Power2.easeOut
+        });
+      };
+
+      var toggleMenu = function toggleMenu() {
+        !_this.visibleNav ? openMenu() : closeMenu();
+        _this.visibleNav = !_this.visibleNav;
+      };
+
+      document.onscroll = function () {
+        if (_this.visibleNav) {
+          closeMenu();
+          _this.visibleNav = !_this.visibleNav;
+        }
+      };
+
+      window.onresize = function () {
+        if (_this.visibleNav) {
+          closeMenu();
+          _this.visibleNav = !_this.visibleNav;
+        }
+      };
+
+      menuBtn.addEventListener('click', toggleMenu);
+    }
+  }]);
+
+  return Menu;
+}();
+
+exports.default = Menu;
 });
 
 ;require.register("functions/utils/auxiliar.js", function(exports, require, module) {

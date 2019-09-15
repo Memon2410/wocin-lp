@@ -67,17 +67,20 @@ header {
         ul {
             li {
                 width: 14rem;
+                height: 3.5rem;
                 text-align: center;
-                button {
+                a {
                     width: 12.5rem;
-                    height: 3.5rem;
+                    padding: 0.5rem;
                     font-size: 1.4rem;
                     text-align: center;
-                    text-transform: uppercase; 
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $BLACK;
                 }
 
                 &:nth-child(2)  {
-                    button {
+                    a {
                         border: solid $BLACK;
                         border-width: 0.1rem 0 0.1rem 0;
                     }

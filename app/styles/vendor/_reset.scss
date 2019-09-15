@@ -38,7 +38,7 @@ table {
   border-spacing: 0;
 }
 
-textarea, select, input, button {
+textarea, select, input[type=text], button {
   border: none;
   outline: none;
   -moz-appearance: none;
@@ -61,5 +61,5 @@ input[type=number] {
 }
 
 ::placeholder {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.5);
 }
