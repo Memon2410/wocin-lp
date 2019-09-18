@@ -43,6 +43,17 @@ body {
         width: 100%;
         position: relative;
     }
+
+    .bg__stain {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .bg__stain--black {
+        img {
+            @include prefix(filter, brightness(0));     
+        }
+    }
 }
 
 h2 {
