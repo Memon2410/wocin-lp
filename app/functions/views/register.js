@@ -20,7 +20,7 @@ export default class Register {
     }
   }
 
-  addAlert(msg) {
+  addAlert (msg) {
     this.alertText.innerText = msg
   }
 
@@ -46,7 +46,7 @@ export default class Register {
     submitBtn.disabled = true
 
     const checkSubmit = () => {
-      if (selectBoolean  && selectCityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean) {
+      if (selectBoolean && selectCityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean) {
         submitBtn.disabled = false
         submitBtn.style.opacity = '1'
       } else {
@@ -96,11 +96,11 @@ export default class Register {
           'Agosto',
           'Septiembre',
           'Noviembre',
-          'Diciembre',
+          'Diciembre'
         ],
         today: 'Hoy',
         clear: 'Limpiar',
-        close: 'Cerrar',
+        close: 'Cerrar'
       }
     })
 
@@ -162,9 +162,9 @@ export default class Register {
       }
     }
 
-    document.getElementById('input-phone').onkeyup  = (event) => {
+    document.getElementById('input-phone').onkeyup = (event) => {
       if (event.target.value.length > 1) {
-        if (event.target.value.match("^([0-9][0-9]*)$")) {
+        if (event.target.value.match('^([0-9][0-9]*)$')) {
           this.addAlert('')
         } else {
           phoneBoolean = false
@@ -182,6 +182,14 @@ export default class Register {
         phoneBoolean = false
         this.addAlert('Ingresa tu número telefónico a 10 dígitos')
       }
+    }
+
+    // Submit button
+    document.getElementById('submit-btn').onclick = (event) => {
+      event.preventDefault()
+      document.getElementsByClassName('container__form')[0].style.display = 'none'
+      document.getElementsByClassName('thank__you--page')[0].style.display = 'block'
+      window.location.href = '#form'
     }
   }
 }

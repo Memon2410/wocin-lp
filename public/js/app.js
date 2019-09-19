@@ -14472,7 +14472,7 @@ var Register = function () {
 
       document.getElementById('input-phone').onkeyup = function (event) {
         if (event.target.value.length > 1) {
-          if (event.target.value.match("^([0-9][0-9]*)$")) {
+          if (event.target.value.match('^([0-9][0-9]*)$')) {
             _this.addAlert('');
           } else {
             phoneBoolean = false;
@@ -14490,6 +14490,14 @@ var Register = function () {
           phoneBoolean = false;
           _this.addAlert('Ingresa tu número telefónico a 10 dígitos');
         }
+      };
+
+      // Submit button
+      document.getElementById('submit-btn').onclick = function (event) {
+        event.preventDefault();
+        document.getElementsByClassName('container__form')[0].style.display = 'none';
+        document.getElementsByClassName('thank__you--page')[0].style.display = 'block';
+        window.location.href = '#form';
       };
     }
   }]);
