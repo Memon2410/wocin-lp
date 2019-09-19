@@ -103,9 +103,9 @@
 }
 
 .dp-cal-header {
+  height: 6rem;
   position: relative;
   text-align: center;
-  padding-bottom: 16px;
   background: $YELLOW;
 }
 
@@ -171,6 +171,7 @@
 }
 
 .dp-cal-footer {
+  height: 4rem;
   text-align: center;
   background: $YELLOW;
 }
@@ -310,7 +311,7 @@
   .dp-modal .dp {
     font-size: 0.9em;
     width: auto;
-    width: 100%;
+    width: calc(100% - 4rem);
   }
 
   .dp-day-of-week,

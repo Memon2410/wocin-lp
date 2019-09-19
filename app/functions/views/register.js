@@ -131,7 +131,7 @@ export default class Register {
         year = dp.state.selectedDate.getUTCFullYear()
         month = dp.state.selectedDate.getUTCMonth() + 1
         day = dp.state.selectedDate.getUTCDate()
-        birthDay = Moment(year + '-' + month + '-' + day)
+        birthDay = Moment(dp.state.selectedDate)
         checkAdult(birthDay)
       },
 
@@ -189,6 +189,7 @@ export default class Register {
       event.preventDefault()
       document.getElementsByClassName('container__form')[0].style.display = 'none'
       document.getElementsByClassName('thank__you--page')[0].style.display = 'block'
+      document.getElementById('form').style.minHeight = '100%'
       window.location.href = '#form'
     }
   }
