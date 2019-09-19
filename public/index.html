@@ -79,7 +79,7 @@
                         WÖC In, es un proyecto pensado para quienes desean retarse, darle un giro completo a su vida y ganar dinero
                       </p>
                       <div class="container__button">
-                          <button class="cta-button font-barlow">¡Únete al reto!</button>
+                          <a href="#form" class="cta-button font-barlow">¡Únete al reto!</a>
                       </div>
                   </div>
 
@@ -145,7 +145,7 @@
                   </picture>
 
                   <div class="container__button">
-                      <button class="cta-button font-barlow">Descubrir más</button>
+                      <a href="#form" class="cta-button font-barlow">Descubrir más</a>
                   </div>
               </div>
           </div>
@@ -163,7 +163,7 @@
                   </div>
 
                   <div class="container__button">
-                      <button class="cta-button font-barlow">¡Únete al reto!</button>
+                      <a href="#form" class="cta-button font-barlow">¡Únete al reto!</a>
                   </div>
               </div>
           </div>
@@ -245,7 +245,7 @@
                       </div>
 
                     <div class="container__button">
-                      <button class="cta-button font-barlow">QUIERO REGISTRARME</button>
+                      <a href="#form" class="cta-button font-barlow">QUIERO REGISTRARME</a>
                     </div>
                   </div>
               </div>
@@ -271,7 +271,7 @@
                     </div>
                     <div class="form__field">
                       <label class="font-barlow" for="input-date">*Fecha de nacimiento</label>
-                      <input type="text" class="input-form input-texts font-roboto dp-below" name="input-date"  id="input-date" required>
+                      <input type="text" class="input-form input-texts font-roboto" name="input-date"  id="input-date" required>
                     </div>
 
                     <div class="form__field">
@@ -279,18 +279,22 @@
                       <select class="input-form input-select font-roboto" id="input-state" name="input-state" required></select>
                     </div>
 
-                    <div class="form__field">
+                    <div class="form__field" id="container--input__city">
                       <label class="font-barlow" for="input-city">*Ciudad</label>
                       <select class="input-form input-select font-roboto" id="input-city" name="input-city" required></select>
                     </div>
                     <div class="container__terms">
-                        <input type="checkbox" class="font-roboto" id="terms" name="terms" value="terms"> ACEPTO TÉRMINOS Y CONDICIONES
+                        <input type="checkbox" id="terms" name="terms" value="terms"> 
+                        <label class="font-roboto">ACEPTO TÉRMINOS Y CONDICIONES</label>
                     </div>
 
                     <div class="container__button">
-                      <input type="submit" value="ENVIAR" class="font-barlow">
+                      <input type="submit" id="submit-btn" value="ENVIAR" class="font-barlow">
                     </div>
-
+                    
+                    <div class="form__field">
+                      <p class="font-barlow" id="alert-form"></p>
+                    </div>
                   </form>
               </div>
           </div>

@@ -29,7 +29,7 @@
                 background: $WHITE_OPACITY;
             }
 
-            input[type=text] {
+            input {
                 width: calc(100% - 2rem);
             }
 
@@ -38,29 +38,47 @@
                 background-image: url(/img/general/arrow_down.svg);
                 background-repeat: no-repeat;
                 background-position: 95%;
+                color: rgba(0, 0, 0, 0.25);
             }
 
+            #alert-form {
+                font-weight: 900;
+                font-size: 1.1rem;
+                text-align: center;
+                text-transform: uppercase;
+                color: $RED;
+            }
         }
 
-        .container__terms {
-            width: 85%;
-            max-width: 60rem;
-            margin: 2rem auto 1rem;
-            font-family: $ROBOTO;
+        #container--input__city {
+            display: none;
+        }
+
+        input[type=submit] {
+            max-width: 20rem;
+            font-size: 1.75rem;
+            opacity: 0.5;
+        }
+    }
+
+    .container__terms,
+    .container__button {
+        width: 85%;
+        max-width: 60rem;
+        margin: 2rem auto 1rem
+    }
+
+    .container__terms {
+        text-align: right;
+        label {
             font-weight: 700;
-            text-align: right;
         }
+    }
 
-        .container__button {
-            margin: 2rem auto;
-            text-align: center;
-
-            input[type=submit] {
-                width: 12rem;
-                font-size: 2rem;
-                padding: 1rem 2rem;
-            }
-        }
+    .container__button {
+        width: 50%;
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
@@ -70,4 +88,3 @@
         min-height: 86rem;
     }
 }
-
