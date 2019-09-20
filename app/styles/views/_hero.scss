@@ -66,6 +66,7 @@
         }
 
         .container__text--hero {
+
             h1 {
                 font-size: 2.4rem;
                 line-height: 2.75rem;
@@ -91,3 +92,25 @@
     }
 }
 
+@media screen and (min-width: 64rem) {
+    .hero {
+        .container__text--hero {
+            max-width: 45rem;
+            h1 {
+                font-size: 3.25rem;
+                line-height: 4rem;
+            }
+
+            h3 {
+                font-size: 2.25rem;
+                line-height: 3rem;
+            }
+
+            p {
+                margin: 1.4rem auto;
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+            }
+        }
+    }
+}

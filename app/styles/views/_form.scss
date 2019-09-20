@@ -85,6 +85,31 @@
 @media screen and (min-width: 48rem) {
     .form {
         padding: 5.5rem 0 4rem;
-        min-height: 86rem;
+        min-height: 70rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .form {
+        padding: 7rem 0 5rem;
+        min-height: 75rem;
+
+        form {
+            margin: 2rem auto;
+
+            .form__field {
+                margin: 0 auto 1.25rem;
+
+                label {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    margin: 2.5rem 0 1.25rem;
+                }
+            }
+
+            #alert-form {
+                font-size: 1.25rem;
+            }
+        }
     }
 }

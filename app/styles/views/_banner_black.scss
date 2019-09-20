@@ -63,3 +63,23 @@
     }
 }
 
+@media screen and (min-width: 64rem) {
+    .banner__black {
+        min-height: 10rem;
+
+        .general__content {
+            .container__text--banner {
+                width: 60rem;
+
+                p {
+                    font-size: 2.75rem !important;
+                    line-height: 3.5rem !important;
+                }
+            }
+
+            .container__button {
+                width: 30%;
+            }
+        }
+    }
+}

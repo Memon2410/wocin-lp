@@ -8,16 +8,6 @@ export default class Register {
     this.auxiliar = new Auxiliar()
     this.alertText = document.getElementById('alert-form')
     this.states = ['Selecciona un estado', 'Área Metropolitana', 'Baja California', 'Jalisco', 'Nuevo León', 'Puebla', 'Querétaro', 'Sonora', 'Yucatán']
-    this.cities = {
-      'Área Metropolitana': ['Selecciona una ciudad', 'AMCM (Área Metropolitana y Ciudad de México)'],
-      'Baja California': ['Selecciona una ciudad', 'Tijuana'],
-      'Jalisco': ['Selecciona una ciudad', 'Guadalajara'],
-      'Nuevo León': ['Selecciona una ciudad', 'Monterrey'],
-      'Puebla': ['Selecciona una ciudad', 'Puebla'],
-      'Querétaro': ['Selecciona una ciudad', 'Querétaro'],
-      'Sonora': ['Selecciona una ciudad', 'Hermosillo' ],
-      'Yucatán': ['Selecciona una ciudad', 'Mérida' ]
-    }
   }
 
   addAlert (msg) {
@@ -30,7 +20,7 @@ export default class Register {
     const select = document.getElementById('input-state')
     const selectCity = document.getElementById('input-city')
     let selectBoolean = false
-    let selectCityBoolean = false
+    let cityBoolean = false
     let selectDate = false
     let birthDay
     let age = null
@@ -46,7 +36,7 @@ export default class Register {
     submitBtn.disabled = true
 
     const checkSubmit = () => {
-      if (selectBoolean && selectCityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean) {
+      if (selectBoolean && cityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean) {
         submitBtn.disabled = false
         submitBtn.style.opacity = '1'
       } else {
@@ -59,20 +49,12 @@ export default class Register {
     this.auxiliar.addOptions(this.states, select)
 
     select.onchange = (event) => {
-      that.auxiliar.clearSelect(selectCity)
       setTimeout(() => {
-        that.auxiliar.addOptions(that.cities[event.target.value], selectCity)
         select.style.color = '#000'
         document.getElementById('container--input__city').style.display = 'block'
         selectBoolean = true
         checkSubmit()
       }, 250)
-    }
-
-    selectCity.onchange = (event) => {
-      selectCity.style.color = '#000'
-      selectCityBoolean = true
-      checkSubmit()
     }
 
     // Date picker
@@ -152,6 +134,19 @@ export default class Register {
       checkSubmit()
     }
 
+    document.getElementById('input-city').onkeyup = (event) => {
+      console.log('cndscdnsoicndsoi')
+      if (event.target.value.match(/^[a-z ñáéíóú A-Z ÑÁÉÍÓÚ]+$/)) {
+        cityBoolean = true
+        this.addAlert('')
+      } else {
+        cityBoolean = false
+        this.addAlert('El campo Ciudad sólo debe contener letras')
+      }
+      checkSubmit()
+    }
+
+    // Validation email
     document.getElementById('input-mail').onblur = (event) => {
       if (event.target.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/)) {
         emailBoolean = true
@@ -161,7 +156,7 @@ export default class Register {
         this.addAlert('Ingresa una dirección de correo electrónico válida')
       }
     }
-
+    // Validation phone
     document.getElementById('input-phone').onkeyup = (event) => {
       if (event.target.value.length > 1) {
         if (event.target.value.match('^([0-9][0-9]*)$')) {

@@ -173,6 +173,21 @@
 @media screen and (min-width: 64rem) {
     .style {
         min-height: 64rem;
+
+        .container--title__style {
+            min-height: 30rem;
+
+            h2 {
+                padding: 2.5rem 0 1.25rem;
+            }
+
+            p {
+                max-width: 65rem;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+        }
+
         .container--icons__style {
 
             .container__grid--style {
@@ -181,7 +196,21 @@
                     width: 24%;
                     height: 20rem;
                     padding-top: 3rem;
+
+                    .text__grid--style {
+                        width: 16rem;
+                        margin: 1rem auto 3rem;
+                        padding-left: 1rem;
+                        font-size: 1.4rem;
+                        line-height: 2.25;
+                        text-align: left;
+                        border-left: 0.9rem solid $YELLOW;
+                    }
                 }
+            }
+
+            .container__button {
+                margin: 1rem auto 5rem;
             }
         }
     }
