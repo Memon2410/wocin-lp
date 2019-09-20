@@ -9,7 +9,8 @@
 @import "general/_base.scss";
 
 // Components
-@import "components/date-picker.scss";
+@import "components/_date-picker.scss";
+@import "components/_slider.scss";
 
 // Layout
 @import "layout/_header.scss";

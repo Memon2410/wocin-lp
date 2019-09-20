@@ -51,7 +51,7 @@ body {
 
     .bg__stain--black {
         img {
-            @include prefix(filter, brightness(0));     
+            @include prefix(filter, brightness(0));
         }
     }
 }

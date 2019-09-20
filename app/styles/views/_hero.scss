@@ -45,7 +45,7 @@
 
     picture {
         width: auto;
-        height: 115%;
+        height: 105%;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -66,6 +66,7 @@
         }
 
         .container__text--hero {
+            max-width: 35rem;
 
             h1 {
                 font-size: 2.4rem;

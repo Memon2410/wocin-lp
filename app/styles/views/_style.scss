@@ -28,10 +28,15 @@
     }
 
     .container--icons__style {
+
         .container__grid--style {
             width: 100%;
             position: relative;
-            padding: 2rem 0;
+            padding: 4rem 0 0;
+            background: url(../img/style/stroke.svg);
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
 
             .item__grid--style {
                 width: 49%;
@@ -41,14 +46,14 @@
                 margin-bottom: 4rem;
                 text-align: center;
 
-                &:nth-child(1) {
+                &:nth-child(2) {
                     .bg__stain {
                         left: 60%;
                         top: 96%;
                     }
                 }
 
-                &:nth-child(2) {
+                &:nth-child(3) {
                     .bg__stain {
                         left: 90%;
                         top: 42%;
@@ -56,7 +61,7 @@
                     }
                 }
 
-                &:nth-child(3) {
+                &:nth-child(4) {
                     .bg__stain {
                         left: 25%;
                         top: 10%;
@@ -64,7 +69,7 @@
                     }
                 }
 
-                &:nth-child(4) {
+                &:nth-child(5) {
                     .bg__stain {
                         left: 55%;
                         top: 90%;
@@ -124,8 +129,23 @@
     }
 }
 
+@media screen and (min-width: 30rem) {
+    .style {
+        .container--icons__style {
+            .container__grid--style {
+                background-size: calc(75% - 4rem);
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 36rem) {
     .style {
+        .container--icons__style {
+            .container__grid--style {
+                background-size: calc(70% - 4rem);
+            }
+        }
         .container--title__style {
             min-height: 20rem;
             p {
@@ -142,6 +162,12 @@
         min-height: 80rem;
 
         .container--icons__style {
+            padding: 4rem 0 2rem;
+
+            .container__grid--style {
+                background-size: calc(55% - 4rem);
+            }
+
             .item__grid--style {
                 .img__grid--style {
                     width: 10.8rem;
@@ -191,6 +217,8 @@
         .container--icons__style {
 
             .container__grid--style {
+                padding: 0 0 1rem;
+                background-size: 0;
 
                 .item__grid--style {
                     width: 24%;
@@ -212,6 +240,16 @@
             .container__button {
                 margin: 1rem auto 5rem;
             }
+        }
+
+        .stroke--desktop {
+            width: 70%;
+            position: absolute;
+            margin: auto;
+            top: 65%;
+            left: 0;
+            right: 0;
+            border: 2px dashed $BLACK;
         }
     }
 }

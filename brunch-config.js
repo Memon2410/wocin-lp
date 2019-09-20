@@ -1,5 +1,10 @@
 // See http://brunch.io for documentation.
 module.exports = {
+  npm: {
+    styles: {
+      '@glidejs': ['glide/dist/css/glide.core.min.css']
+    }
+  },
   files: {
     javascripts: {
       joinTo: 'js/app.js'
