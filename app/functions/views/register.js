@@ -1,5 +1,5 @@
 import Auxiliar from '../utils/auxiliar'
-import TinyDatePicker from 'tiny-date-picker'
+import datepicker from 'js-datepicker'
 import Moment from 'moment'
 
 export default class Register {
@@ -58,69 +58,37 @@ export default class Register {
     }
 
     // Date picker
-    const checkAdult = (birthday) => {
-      const today = Moment()
-      age = today.diff(birthDay, 'years')
-      isAdult = age >= 18
-    }
+    const today = new Date()
+    today.setFullYear(today.getFullYear() - 18)
 
-    let dp = TinyDatePicker('#input-date', {
-      lang: {
-        days: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-        months: [
-          'Enero',
-          'Febrero',
-          'Marzo',
-          'Abril',
-          'Mayo',
-          'Junio',
-          'Julio',
-          'Agosto',
-          'Septiembre',
-          'Noviembre',
-          'Diciembre'
-        ],
-        today: 'Hoy',
-        clear: 'Limpiar',
-        close: 'Cerrar'
-      }
-    })
-
-    dp.on({
-      open: () => {
-        console.log('Opened!')
-      },
-
-      close: () => {
-        if (isAdult) {
-          dateBoolean = true
-          this.addAlert('')
-        } else {
-          dateBoolean = false
-          this.addAlert('Debes se mayor de edad')
-        }
-        if (parseInt(day) < 10) {
-          day = '0' + day
-        }
-        if (parseInt(month) < 10) {
-          month = '0' + month
-        }
-        document.getElementById('input-date').value = day + '/' + month + '/' + year
+    const picker = datepicker('#input-date', {
+      onSelect: (instance, date) => {
+        dateBoolean = true
+        this.addAlert('')
         checkSubmit()
       },
-
-      select: (_, dp) => {
-        year = dp.state.selectedDate.getUTCFullYear()
-        month = dp.state.selectedDate.getUTCMonth() + 1
-        day = dp.state.selectedDate.getUTCDate()
-        birthDay = Moment(dp.state.selectedDate)
-        checkAdult(birthDay)
+      onShow: instance => {
+      },
+      onHide: instance => {
       },
 
-      statechange: (_, dp) => {
-        console.log(dp.state)
-      }
+      formatter: (input, date, instance) => {
+        const value = date.toLocaleDateString('es-MX')
+        input.value = value
+      },
+
+      startDay: 1,
+      customDays: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+      customMonths: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+      overlayButton: 'Aceptar',
+      overlayPlaceholder: 'Ingresa un año'
+
     })
+
+    picker.setDate(today)
+    picker.setMax(today)
+    picker.setMin(new Date(1900, 0, 1))
+    document.getElementById('input-date').value = ''
 
     // Validation Name
     document.getElementById('input-name').onkeyup = (event) => {
