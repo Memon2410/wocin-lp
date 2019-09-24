@@ -1,12 +1,14 @@
 export default class Menu {
   constructor () {
     this.visibleNav = false
+    this.scrollBtn = document.getElementsByClassName('scroll--top')[0]
   }
 
   initMenu () {
     const menuBtn = document.getElementsByClassName('hamburger--header')[0]
     const menu = document.getElementsByTagName('nav')[0]
     const strokes = document.getElementsByClassName('stroke--menu')
+    let difference = window.innerWidth < 768 ? 105 : 175
 
     TweenLite.to(menu, 0, {
       x: -120,
@@ -79,7 +81,39 @@ export default class Menu {
         closeMenu()
         this.visibleNav = !this.visibleNav
       }
+      difference = window.innerWidth < 768 ? 105 : 175
     }
+
+    window.onscroll = (event) => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+      scrollTop > 175 ? this.scrollBtn.style.display = 'block' : this.scrollBtn.style.display = 'none'
+    }
+
+    this.scrollBtn.addEventListener('click', () => {
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      })
+    })
+
+    document.getElementsByClassName('benefits--btn')[0].addEventListener('click', () => {
+      window.scroll({
+        top: document.getElementsByClassName('benefits')[0].offsetTop - difference,
+        behavior: 'smooth' })
+    })
+
+    document.getElementsByClassName('style--btn')[0].addEventListener('click', () => {
+      window.scroll({
+        top: document.getElementsByClassName('style')[0].offsetTop - difference,
+        behavior: 'smooth' })
+    })
+
+    document.getElementsByClassName('form--btn')[0].addEventListener('click', () => {
+      window.scroll({
+        top: document.getElementsByClassName('form')[0].offsetTop - difference,
+        behavior: 'smooth' })
+    })
 
     menuBtn.addEventListener('click', toggleMenu)
   }

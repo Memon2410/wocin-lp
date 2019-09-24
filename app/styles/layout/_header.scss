@@ -1,7 +1,7 @@
 header {
     width: 100%;
     height: 10.5rem;
-    position: relative;
+    position: fixed;
     background: $WHITE;
     z-index: 10;
 
@@ -15,7 +15,9 @@ header {
     }
 
     .hamburger--header {
+        width: 3.2rem;
         text-align: left;
+        cursor: pointer;
 
         span {
             width: 2.25rem;
@@ -77,6 +79,7 @@ header {
                     text-decoration: none;
                     text-transform: uppercase;
                     color: $BLACK;
+                    cursor: pointer;
                 }
 
                 &:nth-child(2)  {
