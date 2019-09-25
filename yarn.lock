@@ -2810,11 +2810,6 @@ js-base64@^2.1.8:
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
   integrity sha512-M7kLczedRMYX4L8Mdh4MzyAMM9O5osx+4FcOQuTvr3A9F2D9S5JXheN0ewNbrvK2UatkTRhL5ejGmGSjNMiZuw==
 
-js-datepicker@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/js-datepicker/-/js-datepicker-5.0.2.tgz#d979bfed6468bd457331f982a951c4a46ad5e19c"
-  integrity sha512-WQhAD8uIuXWINyEJjwgj4MHutTHcqSXnHXa0O22gzTFqgEPm5NIGGE3NPj5iSdNdDn3FHPCj5SrCAZB8mc2TuQ==
-
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4569,11 +4564,6 @@ timers-browserify@~1.4.2:
   integrity sha1-ycWLV1voQHN1y14kYtrO50NZ9B0=
   dependencies:
     process "~0.11.0"
-
-tiny-date-picker@^3.2.8:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/tiny-date-picker/-/tiny-date-picker-3.2.8.tgz#e060567476d7d38860eb50d82a7ccddede8290b2"
-  integrity sha512-XrZ2ujRDZLom3DtquzjtEh+kBLbivErqfbqbNG8sVA7ZCUxerIiorxfM87akQNbBnKttBaiXAZwZi46e2mFX7Q==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"

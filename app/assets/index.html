@@ -377,8 +377,18 @@
                       <input type="text" class="input-form input-texts font-roboto" name="input-phone"  id="input-phone" minlength="10" maxlength="10" placeholder="5522334455" required>
                     </div>
                     <div class="form__field">
-                      <label class="font-barlow" for="input-date">*Fecha de nacimiento</label>
-                      <input type="text" class="input-form input-texts font-roboto" name="input-date"  id="input-date" required readonly>
+                      <label class="font-barlow" for="input-date">*Fecha de nacimiento DD/MM/AAAA</label>
+                      <div class="age--form__inputs">
+                        <div class="age--form__input">
+                          <input type="number" class="input-date font-roboto" name="day" id="day" placeholder="00" onKeyPress="console.log(this.value +'..' + this.value.length); if(this.value.length===2) return false" aria-label="Día" /> 
+                        </div>
+                        <div class="age--form__input">
+                          <input type="number" class="input-date font-roboto" name="month" id="month" placeholder="00" onKeyPress="if(this.value.length===2) return false" aria-label="Mes" />
+                        </div>
+                        <div class="age--form__input">
+                          <input type="number" class="input-date font-roboto" name="year" id="year" placeholder="0000" onKeyPress="if(this.value.length===4) return false" aria-label="Año" />
+                        </div>
+                      </div> 
                     </div>
 
                     <div class="form__field">
@@ -387,7 +397,7 @@
                     </div>
                     <div class="form__field" id="container--input__city">
                       <label class="font-barlow" for="input-city">*Ciudad</label>
-                      <input type="text" class="input-form input-texts font-roboto" name="input-city"  id="input-city" minlength="4" maxlength="50" placeholder="Ciudad de México" required>
+                      <select class="input-form input-select font-roboto" id="input-city" name="input-city" required></select>
                     </div>
                     <div class="container__terms">
                         <input type="checkbox" id="terms" name="terms" value="terms"> 

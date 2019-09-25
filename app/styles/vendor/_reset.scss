@@ -38,7 +38,7 @@ table {
   border-spacing: 0;
 }
 
-textarea, select, input[type=text], button {
+textarea, select, input[type=text], input[type=number], button {
   border: none;
   outline: none;
   -moz-appearance: none;
@@ -63,7 +63,8 @@ input[type=number] {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+[type=number] {
   -webkit-appearance: button;
 }
 
