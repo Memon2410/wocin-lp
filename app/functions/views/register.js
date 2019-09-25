@@ -150,10 +150,7 @@ export default class Register {
     // Submit button
     document.getElementById('submit-btn').onclick = (event) => {
       event.preventDefault()
-      document.getElementsByClassName('container__form')[0].style.display = 'none'
-      document.getElementsByClassName('thank__you--page')[0].style.display = 'block'
-      document.getElementById('form').style.minHeight = '100%'
-      window.location.href = '#form'
+      window.location.href = '/gracias.html'
     }
   }
 }

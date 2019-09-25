@@ -1,46 +1,70 @@
-.thank__you--page {
-	width: 85%;
-	max-width: 56rem;
+#thank__you--page {
+	height: auto;
+	min-height: calc(100vh - 17rem);
 	position: relative;
-	display: none;
-	margin: 0 auto;
-	padding: 4rem 0;
-	text-align: center;
 
-	.thank__you--text {
-		margin: 1rem auto;
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 6rem;
+	.general__container,
+	.general__content {
+		height: auto;
+		min-height: calc(100vh - 17rem);
 	}
 
-	.thank__you--msg {
-		font-size: 2rem;
-		font-weight: 300;
-		line-height: 3rem;
-	}
+	.thank__you--page {
+		width: 85%;
+		max-width: 56rem;
+		height: 30rem;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		text-align: center;
 
-	.thank__you--rock {
-		margin: 5rem auto;
-		font-family: $THIRD_RAIL;
-		font-size: 9rem;
+		.thank__you--text {
+			margin: 1rem auto;
+			font-size: 4rem;
+			font-weight: 700;
+			line-height: 6rem;
+		}
+
+		.thank__you--msg {
+			font-size: 2rem;
+			font-weight: 300;
+			line-height: 3rem;
+		}
+
+		.thank__you--rock {
+			margin: 5rem auto;
+			font-family: $THIRD_RAIL;
+			font-size: 9rem;
+		}
 	}
 }
 
 @media screen and (min-width: 48rem) {
-	.thank__you--page {
-		margin: 0 auto;
-		padding: 8rem 0;
+	#thank__you--page {
+		min-height: calc(100vh - 20rem);
 
-		.thank__you--text {
-			margin: 2rem auto;
-			font-size: 7rem;
-			line-height: 9rem;
+		.general__container,
+		.general__content {
+			height: auto;
+			min-height: calc(100vh - 20rem);
 		}
 
-		.thank__you--rock {
-			font-size: 12rem;
-			line-height: 14rem;
+		.thank__you--page {
+			height: 35rem;
+
+			.thank__you--text {
+				margin: 2rem auto;
+				font-size: 7rem;
+				line-height: 9rem;
+			}
+
+			.thank__you--rock {
+				font-size: 12rem;
+				line-height: 14rem;
+			}
 		}
 	}
 }
