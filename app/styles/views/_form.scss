@@ -2,6 +2,14 @@
     padding: 3.5rem 0 8rem;
     min-height: 66rem;
 
+    h2 {
+        width: 25rem;
+        .accent {
+            top: -0.5rem;
+            left: 7rem;
+        }
+    }
+
     form {
         margin: 2rem auto;
 
@@ -36,10 +44,9 @@
 
             select {
                 width: 100%;
-                background-image: url(/img/general/arrow_down.svg);
+                background-image: url(../img/general/arrow_down.svg);
                 background-repeat: no-repeat;
                 background-position: 95%;
-                color: rgba(0, 0, 0, 0.25);
             }
 
             .age--form__inputs {
@@ -104,6 +111,14 @@
     .form {
         padding: 5.5rem 0 4rem;
         min-height: 70rem;
+
+        h2 {
+            width: 38rem;
+            .accent {
+                top: -0.75rem;
+                left: 10.5rem;
+            }
+        }
     }
 }
 
@@ -111,6 +126,14 @@
     .form {
         padding: 7rem 0 5rem;
         min-height: 75rem;
+
+        h2 {
+            width: 51rem;
+            .accent {
+                top: -1rem;
+                left: 14rem;
+            }
+        }
 
         form {
             margin: 2rem auto;

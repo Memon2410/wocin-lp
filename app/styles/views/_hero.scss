@@ -1,6 +1,6 @@
 .hero {
     min-height: 24rem;
-    margin-top: 11.5rem !important;
+    margin-top: 8.5rem !important;
 
     .general__content {
         min-height: 24rem;
@@ -45,13 +45,35 @@
 
     picture {
         width: auto;
-        height: 105%;
+        height: 85%;
         position: absolute;
-        right: 0;
+        right: -3rem;
         bottom: 0;
 
         img {
             height: 100%;
+        }
+    }
+
+    #slide-4 {
+        picture {
+            height: 100%;
+            right: -12rem;
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .hero {
+        picture {
+            height: 100% !important;
+            right: 0 !important;
+        }
+
+        #slide-4 {
+            picture {
+                right: -5rem !important;
+            }
         }
     }
 }
@@ -59,7 +81,7 @@
 @media screen and (min-width: 48rem) {
     .hero {
         min-height: 44rem;
-        margin-top: 19.5rem !important;
+        margin-top: 14.5rem !important;
 
         .general__content {
             min-height: 44rem;
@@ -90,6 +112,12 @@
                 }
             }
         }
+
+        #slide-3 {
+            picture {
+                left: -8rem !important;
+            }
+        }
     }
 }
 
@@ -113,5 +141,14 @@
                 line-height: 2.25rem;
             }
         }
+
+        picture {
+            height: 105%;
+        }
+
+        #slide3 {
+            left: 0 !important;
+        }
+
     }
 }

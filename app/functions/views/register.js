@@ -133,6 +133,9 @@ export default class Register {
         }
       } else {
         if (event.target.value < 1900) {
+          for (let i = 0; i < inputs.length; i++) {
+            inputs[i].style.border = '1px solid #E0655F'
+          }
           this.addAlert(invalidDate)
           event.target.value = ''
           dateBoolean = false
@@ -140,25 +143,39 @@ export default class Register {
       }
 
       if (parseInt(event.target.value) > maxNumber) {
+        event.target.style.border = '1px solid #E0655F'
         this.addAlert(invalidDate)
         event.target.value = ''
         dateBoolean = false
       } else if (event.target.value !== '') {
+        event.target.style.border = '0 solid transparent'
         dateInput[index] = true
       }
 
       if (dateInput.dayInput && dateInput.monthInput && dateInput.yearInput) {
+        for (let i = 0; i < inputs.length; i++) {
+          inputs[i].style.border = '0 solid transparent'
+        }
         this.addAlert('')
         birthDay = Moment(inputs[2].value + '-' + inputs[1].value + '-' + inputs[0].value)
         if (isNaN(birthDay)) {
+          for (let i = 0; i < inputs.length; i++) {
+            inputs[i].style.border = '1px solid #E0655F'
+          }
           this.addAlert(invalidDate)
           dateBoolean = false
         } else {
           checkAdult(birthDay)
           if (isAdult) {
+            for (let i = 0; i < inputs.length; i++) {
+              inputs[i].style.border = '0 solid transparent'
+            }
             this.addAlert('')
             dateBoolean = true
           } else {
+            for (let i = 0; i < inputs.length; i++) {
+              inputs[i].style.border = '1px solid #E0655F'
+            }
             this.addAlert(notAdult)
             dateBoolean = false
           }
@@ -169,9 +186,11 @@ export default class Register {
     // Validation Name
     document.getElementById('input-name').onkeyup = (event) => {
       if (event.target.value.match(/^[a-z ñáéíóú A-Z ÑÁÉÍÓÚ]+$/)) {
+        document.getElementById('input-name').style.border = '0 solid transparent'
         nameBoolean = true
         this.addAlert('')
       } else {
+        document.getElementById('input-name').style.border = '1px solid #E0655F'
         nameBoolean = false
         this.addAlert('El campo Nombre sólo debe contener letras')
       }
@@ -181,9 +200,11 @@ export default class Register {
     // Validation email
     document.getElementById('input-mail').onblur = (event) => {
       if (event.target.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,5}))$/)) {
+        document.getElementById('input-mail').style.border = '0 solid transparent'
         emailBoolean = true
         this.addAlert('')
       } else {
+        document.getElementById('input-mail').style.border = '1px solid #E0655F'
         emailBoolean = false
         this.addAlert('Ingresa una dirección de correo electrónico válida')
       }
@@ -192,8 +213,10 @@ export default class Register {
     document.getElementById('input-phone').onkeyup = (event) => {
       if (event.target.value.length > 1) {
         if (event.target.value.match('^([0-9][0-9]*)$')) {
+          document.getElementById('input-phone').style.border = '0 solid transparent'
           this.addAlert('')
         } else {
+          document.getElementById('input-phone').style.border = '1px solid #E0655F'
           phoneBoolean = false
           this.addAlert('El campo Teléfono solo debe contener números')
         }
@@ -203,9 +226,11 @@ export default class Register {
 
     document.getElementById('input-phone').onblur = (event) => {
       if (event.target.value.length === 10) {
+        document.getElementById('input-phone').style.border = '0 solid transparent'
         phoneBoolean = true
         this.addAlert('')
       } else {
+        document.getElementById('input-phone').style.border = '1px solid #E0655F'
         phoneBoolean = false
         this.addAlert('Ingresa tu número telefónico a 10 dígitos')
       }
@@ -214,12 +239,12 @@ export default class Register {
     // Submit button
     document.getElementById('submit-btn').onclick = (event) => {
       event.preventDefault()
-      window.location.href = '/gracias.html'
+      window.location.href = './gracias.html'
     }
 
-    Array.from(inputs).forEach((element) => {
-      element.addEventListener('input', checkLength)
-      element.addEventListener('focusout', checkNumbers)
-    })
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('input', checkLength)
+      inputs[i].addEventListener('focusout', checkNumbers)
+    }
   }
 }

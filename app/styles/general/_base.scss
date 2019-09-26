@@ -57,9 +57,16 @@ body {
 }
 
 h2 {
+    position: relative;
+    margin: 0 auto;
     font-family: $THIRD_RAIL;
     font-size: 3.6rem;
     text-align: center;
+
+    .accent {
+        width: 1rem;
+        position: absolute;
+    }
 }
 
 .font-barlow {
@@ -125,6 +132,9 @@ input[type=submit] {
 @media screen and (min-width: 48rem) {
     h2 {
         font-size: 5.5rem;
+        .accent {
+            width: 1.75rem;
+        }
     }
     .tiny-text {
         font-size: 1rem;
@@ -137,6 +147,9 @@ input[type=submit] {
 @media screen and (min-width: 64rem) {
     h2 {
         font-size: 7.5rem;
+        .accent {
+            width: 2.25rem;
+        }
     }
 
     .cta-button {

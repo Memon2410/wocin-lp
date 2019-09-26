@@ -2,9 +2,9 @@
   "name": "WOCin",
   "description": "WOCin landing page",
   "private": true,
-  "author": "Memon2410",
+  "author": "AXA",
   "version": "0.0.1",
-  "repository": "https://github.com/Memon2410/wocin-lp.git",
+  "repository": "",
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build --production"

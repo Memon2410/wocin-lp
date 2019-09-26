@@ -108,7 +108,7 @@
                       <div class="container__text--hero">
                           <h1 class="font-barlow">#ConvierteTuVida</h1>
                           <h3 class="font-roboto">
-                            En Woc In, un proyecto innovador desarrollamos tu talento y habilidades de venta.
+                            En WÖC in, un proyecto innovador desarrollamos tu talento y habilidades de venta.
                           </h3>
                           <p class="font-roboto">
                             Buscamos talento para formarlo y puedan así transformar su manera de trabajar ayudando a los demás.
@@ -200,23 +200,20 @@
         <div class="general__container">
             <div class="bg__stain bg__stain--yellow">
               <img src="./img/general/stain.svg" alt="background">
-              <div class="bg__square">
-                  <img src="./img/general/stain.svg" alt="background">
-              </div>
             </div>
             <div class="general__content"> 
                 <h2>Beneficios</h2>
 
                 <div class="container__text--benefits">
                   <div class="item__text--benfits">
-                      <h3 class="font-roboto">Ser Woc In es…</h3>
+                      <h3 class="font-roboto">Ser WÖC in es…</h3>
                       <p class="font-barlow">
                           Elegir el lugar donde quieres trabajar
                           <br>Tu ritmo, tus reglas, tu vida.
                       </p>
                   </div>
                   <div class="item__text--benfits">
-                      <h3 class="font-roboto">Woc In te respalda</h3>
+                      <h3 class="font-roboto">WÖC in te respalda</h3>
                       <p class="font-barlow">
                           Te acompañamos durante toda tu formación.
                           <br>Trabajas con la empresa número 1 a nivel global en seguros.
@@ -225,8 +222,12 @@
                   <div class="item__text--benfits">
                       <h3 class="font-roboto">Conviértete en un planner</h3>
                       <p class="font-barlow">
-                          En Wöc In encontrarás jóvenes como tú que ya están creando un cambio en la sociedad al mismo tiempo que ganan dinero.
+                          En WÖC in encontrarás jóvenes como tú que ya están creando un cambio en la sociedad al mismo tiempo que ganan dinero.
                       </p>
+
+                      <div class="bg__square">
+                        <img src="./img/general/stain.svg" alt="background">
+                      </div>
                   </div>
                   <div class="item__text--benfits">
                       <h3 class="font-roboto">Equilibrar tu vida</h3>
@@ -262,7 +263,7 @@
                     <p class="text--banner__black font-roboto">
                       ¡Tú también puedes convertirte
                       <br>
-                      en un <span class="font-barlow">WÖC In Planner</span>!
+                      en un <span class="font-barlow">WÖC in Planner</span>!
                     </p>
                 </div>
 
@@ -362,7 +363,8 @@
         <div class="general__container">
             <div class="general__content">
                 <div class="container__form">
-                  <h2>Estas a un paso</h2>
+
+                  <h2>Estas a un paso<img src="./img/general/accent.svg" class="accent"></h2>
                   <form>
                     <div class="form__field">
                       <label class="font-barlow"  for="input-name">*Nombre</label>
@@ -377,16 +379,16 @@
                       <input type="text" class="input-form input-texts font-roboto" name="input-phone"  id="input-phone" minlength="10" maxlength="10" placeholder="5522334455" required>
                     </div>
                     <div class="form__field">
-                      <label class="font-barlow" for="input-date">*Fecha de nacimiento DD/MM/AAAA</label>
+                      <label class="font-barlow" for="input-date">*Fecha de nacimiento</label>
                       <div class="age--form__inputs">
                         <div class="age--form__input">
-                          <input type="number" class="input-date font-roboto" name="day" id="day" placeholder="00" onKeyPress="console.log(this.value +'..' + this.value.length); if(this.value.length===2) return false" aria-label="Día" /> 
+                          <input type="number" class="input-date font-roboto" name="day" id="day" placeholder="DD" onKeyPress="console.log(this.value +'..' + this.value.length); if(this.value.length===2) return false" aria-label="Día" /> 
                         </div>
                         <div class="age--form__input">
-                          <input type="number" class="input-date font-roboto" name="month" id="month" placeholder="00" onKeyPress="if(this.value.length===2) return false" aria-label="Mes" />
+                          <input type="number" class="input-date font-roboto" name="month" id="month" placeholder="MM" onKeyPress="if(this.value.length===2) return false" aria-label="Mes" />
                         </div>
                         <div class="age--form__input">
-                          <input type="number" class="input-date font-roboto" name="year" id="year" placeholder="0000" onKeyPress="if(this.value.length===4) return false" aria-label="Año" />
+                          <input type="number" class="input-date font-roboto" name="year" id="year" placeholder="AAAA" onKeyPress="if(this.value.length===4) return false" aria-label="Año" />
                         </div>
                       </div> 
                     </div>

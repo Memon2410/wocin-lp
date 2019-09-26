@@ -7,20 +7,6 @@
         img {
             width: 20%;
         }
-
-        .bg__square {
-            width: 75%;
-            height: 15rem;
-            position: absolute;
-            top: 30rem;
-            background: $YELLOW;
-
-            img {
-                position: absolute;
-                left: 85%;
-                top: 11rem;
-            }
-        }
     }
     .general__content {
         padding: 3rem 0 1.5rem;
@@ -31,6 +17,7 @@
         margin: 2rem 0;
 
         .item__text--benfits {
+            position: relative;
             margin-bottom: 1.6rem;
 
             h3 {
@@ -47,6 +34,23 @@
             &:first-child {
                 h3 {
                     font-size: 1.8rem;
+                }
+            }
+
+            .bg__square {
+                width: 100vw;
+                height: 120%;
+                position: absolute;
+                left: -40vw;
+                top: -10%;
+                background: $YELLOW;
+                z-index: -1;
+
+                img {
+                    width: 10%;
+                    position: absolute;
+                    right: -3%;
+                    bottom: -10%;
                 }
             }
         }
@@ -126,6 +130,10 @@
                             font-size: 1.6rem;
                         }
                     }
+
+                    .bg__square {
+                        left: -50vw;
+                    }
                 }
             }
             
@@ -181,6 +189,9 @@
                         p {
                             font-size: 2rem;
                         }
+                    }
+                    .bg__square {
+                        left: -60vw;
                     }
                 }
             }

@@ -4,13 +4,13 @@
     .general__content {
         padding: 1.5rem 0;
         .container__text--banner {
-            width: 65%;
+            width: 60%;
             position: relative;
             display: inline-block;
             vertical-align: middle;
 
             p {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 2rem;
                 text-align: center;
                 color: $WHITE;
@@ -21,7 +21,7 @@
         }
 
         .container__button {
-            width: 32%;
+            width: 36%;
             position: relative;
             display: inline-block;
             vertical-align: middle;
@@ -39,6 +39,12 @@
         .container__text--banner,
         .container__button {
             width: 49%;
+        }
+
+        .container__text--banner {
+            p {
+                font-size: 1.4rem;
+            }
         }
 
         .cta-button {

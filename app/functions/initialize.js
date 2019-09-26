@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const register = new Register()
   const slider = new Slider()
 
-  window.difference = window.innerWidth < 768 ? 105 : 175
+  window.difference = window.innerWidth < 768 ? 85 : 145
 
   hamburger.initHamburger()
 

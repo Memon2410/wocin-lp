@@ -93,14 +93,17 @@
 
         .glide__arrow {
             position: absolute;
+            display: none;
         }
 
         .glide__arrow--left {
             left: 0;
+            display: none;
         }
 
         .glide__arrow--right {
             right: 0;
+            display: none;
         }
 
         i {
@@ -168,6 +171,12 @@
 
         .glide__arrows {
             display: block;
+
+            .glide__arrow,
+            .glide__arrow--left
+            .glide__arrow--right { 
+                display: block;
+            }
         }
     }
 }
