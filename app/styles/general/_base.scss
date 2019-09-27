@@ -101,6 +101,7 @@ input[type=submit] {
     text-decoration: none;
     color: $WHITE;
     background: $ORANGE;
+    white-space: nowrap;
 }
 
 .scroll--top {
