@@ -1493,9 +1493,6 @@ footer .container--texts__footer a {
     .banner__black {
         min-height: 10rem
     }
-    .banner__black .general__content .container__text--banner {
-        width: 60rem
-    }
     .banner__black .general__content .container__text--banner p {
         font-size: 2.75rem!important;
         line-height: 3.5rem!important
