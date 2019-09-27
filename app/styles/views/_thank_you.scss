@@ -27,20 +27,20 @@
 
 #thank__you--page {
 	height: auto;
-	min-height: calc(100vh - 14rem);
+	min-height: calc(100vh - 17.5rem);
 	position: relative;
 	padding-top: 3rem;
 
 	.general__container,
 	.general__content {
 		height: auto;
-		min-height: calc(100vh - 14rem);
+		min-height: calc(100vh - 17.5rem);
 	}
 
 	.thank__you--page {
 		width: 85%;
 		max-width: 56rem;
-		height: 30rem;
+		height: 45rem;
 		position: absolute;
 		margin: auto;
 		top: 0;
@@ -66,6 +66,7 @@
 			margin: 5rem auto;
 			font-family: $THIRD_RAIL;
 			font-size: 9rem;
+			line-height: 9rem;
 		}
 	}
 }

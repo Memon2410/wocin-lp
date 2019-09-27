@@ -862,8 +862,8 @@ input[type=submit] {
 
 @media screen and (min-width:30rem) {
     #slider__hero #slide-2 .section-white {
-        height: 7.25rem !important;
-        top: 3.75rem !important
+        height: 7.25rem!important;
+        top: 3.75rem!important
     }
 }
 
@@ -882,8 +882,8 @@ input[type=submit] {
 
 @media screen and (min-width:48rem) {
     #slider__hero #slide-2 .bg__slide .section-white {
-        height: 9rem !important;
-        top: 12rem !important
+        height: 9rem!important;
+        top: 12rem!important
     }
     #slider__hero #slide-3 .container__text--hero {
         right: 0
@@ -892,8 +892,8 @@ input[type=submit] {
 
 @media screen and (min-width:64rem) {
     #slider__hero #slide-2 .bg__slide .section-white {
-        height: 17rem !important;
-        top: 5rem !important
+        height: 17rem!important;
+        top: 5rem!important
     }
     #slider__hero #slide-3 .container__text--hero {
         right: 5%
@@ -1035,7 +1035,7 @@ footer {
 }
 
 footer .general__content {
-    margin: 1.5rem auto !important
+    margin: 1.5rem auto!important
 }
 
 footer .container__social--footer {
@@ -1045,7 +1045,7 @@ footer .container__social--footer {
 }
 
 footer .container__social--footer a {
-    margin: 0 .25rem !important
+    margin: 0 .25rem!important
 }
 
 footer .container__social--footer a img {
@@ -1074,7 +1074,7 @@ footer .container--texts__footer a {
         height: 11.2rem
     }
     footer .general__content {
-        margin: 3.5rem auto !important
+        margin: 3.5rem auto!important
     }
     footer .container--texts__footer {
         width: calc(100% - 21rem)
@@ -1095,7 +1095,7 @@ footer .container--texts__footer a {
 
 .hero {
     min-height: 24rem;
-    margin-top: 8.5rem !important
+    margin-top: 8.5rem!important
 }
 
 .hero .general__content {
@@ -1196,7 +1196,7 @@ footer .container--texts__footer a {
 @media screen and (min-width:48rem) {
     .hero {
         min-height: 44rem;
-        margin-top: 14.5rem !important
+        margin-top: 14.5rem!important
     }
     .hero .content--left,
     .hero .content--left__image,
@@ -1480,11 +1480,11 @@ footer .container--texts__footer a {
         min-height: 8rem
     }
     .banner__black .general__content p {
-        font-size: 2rem !important;
-        line-height: 2.5rem !important
+        font-size: 2rem!important;
+        line-height: 2.5rem!important
     }
     .banner__black .general__content .cta-button {
-        width: 21rem !important
+        width: 21rem!important
     }
 }
 
@@ -1496,8 +1496,8 @@ footer .container--texts__footer a {
         width: 60rem
     }
     .banner__black .general__content .container__text--banner p {
-        font-size: 2.75rem !important;
-        line-height: 3.5rem !important
+        font-size: 2.75rem!important;
+        line-height: 3.5rem!important
     }
     .banner__black .general__content .container__button {
         width: 30%
@@ -1999,7 +1999,7 @@ footer .container--texts__footer a {
 
 #thank__you--page {
     height: auto;
-    min-height: calc(100vh - 14rem);
+    min-height: calc(100vh - 17.5rem);
     position: relative;
     padding-top: 3rem
 }
@@ -2007,13 +2007,13 @@ footer .container--texts__footer a {
 #thank__you--page .general__container,
 #thank__you--page .general__content {
     height: auto;
-    min-height: calc(100vh - 14rem)
+    min-height: calc(100vh - 17.5rem)
 }
 
 #thank__you--page .thank__you--page {
     width: 85%;
     max-width: 56rem;
-    height: 30rem;
+    height: 45rem;
     position: absolute;
     margin: auto;
     top: 0;
@@ -2039,7 +2039,8 @@ footer .container--texts__footer a {
 #thank__you--page .thank__you--page .thank__you--rock {
     margin: 5rem auto;
     font-family: third_rail_-_demoregular;
-    font-size: 9rem
+    font-size: 9rem;
+    line-height: 9rem
 }
 
 @media screen and (min-width:48rem) {
