@@ -1,0 +1,2066 @@
+.glide {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.glide * {
+    box-sizing: inherit
+}
+
+.glide__track {
+    overflow: hidden
+}
+
+.glide__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform
+}
+
+.glide__slides--dragging {
+    user-select: none
+}
+
+.glide__slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    white-space: normal;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+.glide__slide a {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.glide__arrows {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide__bullets {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide--rtl {
+    direction: rtl
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+button,
+input[type=number],
+input[type=text],
+select,
+textarea {
+    border: none;
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: 0 0
+}
+
+button {
+    cursor: pointer
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+[type=button],
+[type=number],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, .25)
+}
+
+select::-ms-expand {
+    display: none
+}
+
+@font-face {
+    font-family: third_rail_-_demoregular;
+    src: url(../fonts/third_rail-webfont.woff) format("woff");
+    font-style: normal;
+    font-weight: 400
+}
+
+:root {
+    font-size: 62.5%
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+.hidden {
+    display: none
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+    background: #fff
+}
+
+body .wrapper {
+    overflow: hidden
+}
+
+body .general__container {
+    width: 100%;
+    position: relative
+}
+
+body .general__container .general__content {
+    width: 95%;
+    max-width: 102.4rem;
+    position: relative;
+    margin: 0 auto
+}
+
+body section {
+    width: 100%;
+    position: relative
+}
+
+body .bg__stain {
+    position: absolute;
+    z-index: 0
+}
+
+body .bg__stain--black img {
+    -webkit-filter: brightness(0);
+    -moz-filter: brightness(0);
+    -ms-filter: brightness(0);
+    -o-filter: brightness(0);
+    filter: brightness(0)
+}
+
+h2 {
+    position: relative;
+    margin: 0 auto;
+    font-family: third_rail_-_demoregular;
+    font-size: 3.6rem;
+    text-align: center
+}
+
+h2 .accent {
+    width: 1rem;
+    position: absolute
+}
+
+.font-barlow {
+    font-family: Barlow, sans-serif
+}
+
+.font-roboto {
+    font-family: Roboto, sans-serif
+}
+
+.tiny-text {
+    font-size: .6rem
+}
+
+.section-yellow {
+    background: #f0f812
+}
+
+.section-black {
+    background: #000
+}
+
+.cta-button,
+input[type=submit] {
+    width: 80%;
+    max-width: 30rem;
+    padding: 1rem .5rem;
+    border-radius: .3rem;
+    border: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: #ff4848
+}
+
+.scroll--top {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    display: none;
+    bottom: 5rem;
+    right: 2.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .75);
+    cursor: pointer;
+    z-index: 100
+}
+
+.scroll--top i {
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+    border: solid #000;
+    border-width: 0 .1rem .1rem 0;
+    display: inline-block;
+    padding: 1rem
+}
+
+.scroll--top .top {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg)
+}
+
+@media screen and (min-width:24rem) {
+    .cta-button,
+    input[type=submit] {
+        padding: 1rem
+    }
+}
+
+@media screen and (min-width:48rem) {
+    h2 {
+        font-size: 5.5rem
+    }
+    h2 .accent {
+        width: 1.75rem
+    }
+    .tiny-text {
+        font-size: 1rem
+    }
+    .cta-button {
+        font-size: 2.2rem
+    }
+}
+
+@media screen and (min-width:64rem) {
+    h2 {
+        font-size: 7.5rem
+    }
+    h2 .accent {
+        width: 2.25rem
+    }
+    .cta-button {
+        font-size: 2.25rem
+    }
+}
+
+.qs-datepicker-container {
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+    color: #000;
+    position: absolute;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 9001;
+    user-select: none;
+    border-radius: 0;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2.4rem 2.4rem -1.8rem rgba(0, 0, 0, .3)
+}
+
+.qs-datepicker-container * {
+    box-sizing: border-box
+}
+
+.qs-datepicker-container.qs-centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.qs-datepicker-container.qs-hidden {
+    display: none
+}
+
+.qs-datepicker .qs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .75);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .3s;
+    display: flex;
+    flex-direction: column
+}
+
+.qs-datepicker .qs-overlay.qs-hidden {
+    opacity: 0;
+    z-index: -1
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-year {
+    border: none;
+    background: 0 0;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-size: 2.25rem;
+    padding: .25em 0;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    display: block
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-year::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+.qs-datepicker .qs-overlay .qs-close {
+    padding: .5em;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.qs-datepicker .qs-overlay .qs-submit {
+    border-radius: 0;
+    padding: .5rem 1.5rem;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    color: #fff;
+    background: #ff4848
+}
+
+.qs-datepicker .qs-overlay .qs-submit.qs-disabled {
+    color: rgba(255, 255, 255, .5);
+    cursor: not-allowed;
+    opacity: .4
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .15s
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-month.active,
+.qs-datepicker .qs-overlay .qs-overlay-month:hover {
+    opacity: 1
+}
+
+.qs-datepicker .qs-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background: #ff4848;
+    filter: blur(0);
+    transition: filter .3s;
+    color: #fff
+}
+
+.qs-datepicker .qs-controls.qs-blur {
+    filter: blur(5px)
+}
+
+.qs-datepicker .qs-arrow {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background .15s
+}
+
+.qs-datepicker .qs-arrow:hover.qs-left:after {
+    border-right-color: #fff
+}
+
+.qs-datepicker .qs-arrow:hover.qs-right:after {
+    border-left-color: #fff
+}
+
+.qs-datepicker .qs-arrow:after {
+    content: '';
+    border: .75rem solid transparent;
+    position: absolute;
+    top: 50%;
+    transition: border .2s
+}
+
+.qs-datepicker .qs-arrow.qs-left:after {
+    border-right-color: rgba(255, 255, 255, .5);
+    right: 50%;
+    transform: translate(25%, -50%)
+}
+
+.qs-datepicker .qs-arrow.qs-right:after {
+    border-left-color: rgba(255, 255, 255, .5);
+    left: 50%;
+    transform: translate(-25%, -50%)
+}
+
+.qs-datepicker .qs-month-year {
+    font-weight: 700;
+    transition: border .2s;
+    border-bottom: 1px solid transparent;
+    cursor: pointer
+}
+
+.qs-datepicker .qs-month-year:hover {
+    border-bottom: 1px solid gray
+}
+
+.qs-datepicker .qs-month-year:active:focus,
+.qs-datepicker .qs-month-year:focus {
+    outline: 0
+}
+
+.qs-datepicker .qs-month {
+    padding-right: .5ex
+}
+
+.qs-datepicker .qs-year {
+    padding-left: .5ex
+}
+
+.qs-datepicker .qs-squares {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .6rem;
+    filter: blur(0);
+    transition: filter .3s
+}
+
+.qs-datepicker .qs-squares.qs-blur {
+    filter: blur(5px)
+}
+
+.qs-datepicker .qs-square {
+    width: calc(100% / 7);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .1s;
+    border-radius: 0
+}
+
+.qs-datepicker .qs-square.qs-current {
+    font-weight: 700
+}
+
+.qs-datepicker .qs-square.qs-current span {
+    text-decoration: underline
+}
+
+.qs-datepicker .qs-square.qs-active {
+    font-weight: 700;
+    color: #fff;
+    background: #ff4848
+}
+
+.qs-datepicker .qs-square.qs-disabled span {
+    opacity: .2
+}
+
+.qs-datepicker .qs-square.qs-empty {
+    cursor: default
+}
+
+.qs-datepicker .qs-square.qs-disabled {
+    cursor: not-allowed
+}
+
+.qs-datepicker .qs-square.qs-day {
+    cursor: default;
+    font-weight: 700;
+    color: gray
+}
+
+.qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+    background: #f0f812
+}
+
+#slider__hero .general__content {
+    width: 85%
+}
+
+#slider__hero .glide__slide {
+    overflow: hidden
+}
+
+#slider__hero #slide-2 .bg__slide {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#slider__hero #slide-2 .bg__slide .section-white {
+    width: 75%;
+    height: 8.75rem;
+    position: absolute;
+    left: -10%;
+    top: 2.25rem;
+    background: #fff
+}
+
+#slider__hero #slide-2 .bg__slide .section-black {
+    width: 52%;
+    height: 100%;
+    position: absolute;
+    right: -15%;
+    z-index: 1
+}
+
+#slider__hero #slide-2 .bg__slide .stain--yellow {
+    width: 10%;
+    position: absolute;
+    height: auto;
+    top: 3.25rem;
+    right: 32%;
+    transform: scaleX(-1)
+}
+
+#slider__hero #slide-2 .bg__slide .stain--black {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 73%;
+    transform: rotate(259deg);
+    left: 20%;
+    -webkit-filter: brightness(0);
+    -moz-filter: brightness(0);
+    -ms-filter: brightness(0);
+    -o-filter: brightness(0);
+    filter: brightness(0)
+}
+
+#slider__hero #slide-3 .bg__slide {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#slider__hero #slide-3 .bg__slide img {
+    width: 10%;
+    position: absolute;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -webkit-filter: brightness(0);
+    -moz-filter: brightness(0);
+    -ms-filter: brightness(0);
+    -o-filter: brightness(0);
+    filter: brightness(0)
+}
+
+#slider__hero #slide-3 .container__text--hero {
+    right: 0;
+    text-align: center
+}
+
+#slider__hero #slide-3 picture {
+    left: -15%
+}
+
+#slider__hero .glide__arrows {
+    width: 95%;
+    position: absolute;
+    display: none;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#slider__hero .glide__arrows .glide__arrow {
+    position: absolute;
+    display: none
+}
+
+#slider__hero .glide__arrows .glide__arrow--left {
+    left: 0;
+    display: none
+}
+
+#slider__hero .glide__arrows .glide__arrow--right {
+    right: 0;
+    display: none
+}
+
+#slider__hero .glide__arrows i {
+    border: solid #000;
+    border-width: 0 .1rem .1rem 0;
+    display: inline-block;
+    padding: 1rem
+}
+
+#slider__hero .glide__arrows .right {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+#slider__hero .glide__arrows .left {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+
+#slider__hero .glide__bullets {
+    position: absolute;
+    margin: auto;
+    bottom: .5rem;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+
+#slider__hero .glide__bullets .glide__bullet {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    margin: 0 .25rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .25)
+}
+
+#slider__hero .glide__bullets .glide__bullet--active {
+    background: rgba(255, 255, 255, .75)
+}
+
+@media screen and (min-width:30rem) {
+    #slider__hero #slide-2 .section-white {
+        height: 7.25rem !important;
+        top: 3.75rem !important
+    }
+}
+
+@media screen and (min-width:36rem) {
+    #slider__hero #slide-3 .container__text--hero {
+        right: 5%
+    }
+    #slider__hero .glide__arrows {
+        display: block
+    }
+    #slider__hero .glide__arrows .glide__arrow,
+    #slider__hero .glide__arrows .glide__arrow--left .glide__arrow--right {
+        display: block
+    }
+}
+
+@media screen and (min-width:48rem) {
+    #slider__hero #slide-2 .bg__slide .section-white {
+        height: 9rem !important;
+        top: 12rem !important
+    }
+    #slider__hero #slide-3 .container__text--hero {
+        right: 0
+    }
+}
+
+@media screen and (min-width:64rem) {
+    #slider__hero #slide-2 .bg__slide .section-white {
+        height: 17rem !important;
+        top: 5rem !important
+    }
+    #slider__hero #slide-3 .container__text--hero {
+        right: 5%
+    }
+}
+
+header {
+    width: 100%;
+    height: 8.5rem;
+    position: fixed;
+    background: #fff;
+    z-index: 10
+}
+
+header .item--header {
+    width: 49.5%;
+    height: 8.5rem;
+    position: relative;
+    margin: 1rem 0;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1
+}
+
+header .hamburger--header {
+    width: 3.2rem;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 2.5rem
+}
+
+header .hamburger--header span {
+    width: 2.25rem;
+    height: .5rem;
+    position: relative;
+    display: block;
+    background: #000
+}
+
+header .hamburger--header span:nth-child(2) {
+    margin: .3rem 0
+}
+
+header .container__logo--header {
+    -webkit-width: fit-content;
+    -moz-width: fit-content;
+    -ms-width: fit-content;
+    -o-width: fit-content;
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    text-align: center;
+    z-index: 0
+}
+
+header .container__logo--header img {
+    width: 12rem
+}
+
+header .container__social--header {
+    text-align: right
+}
+
+header .container__social--header a {
+    text-decoration: none
+}
+
+header .container__social--header a img {
+    width: 3rem;
+    margin: 0 .5rem;
+    vertical-align: middle
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+    background: rgba(255, 255, 255, .9);
+    z-index: 2
+}
+
+header nav ul li {
+    width: 14rem;
+    height: 3.5rem;
+    text-align: center
+}
+
+header nav ul li:first-child {
+    padding-top: 1rem
+}
+
+header nav ul li a {
+    width: 12.5rem;
+    padding: 1rem .5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer
+}
+
+header nav ul li:nth-child(2) a {
+    border: solid #000;
+    border-width: .1rem 0 .1rem 0
+}
+
+@media screen and (min-width:48rem) {
+    header {
+        height: 14.5rem
+    }
+    header .hamburger--header span {
+        width: 3.2rem;
+        height: .7rem
+    }
+    header .container__logo--header img {
+        width: 17.8rem;
+        margin-top: 3rem
+    }
+    header .container__social--header {
+        margin-top: 3rem
+    }
+    header .container__social--header a img {
+        width: 3rem;
+        margin: 0 .25rem
+    }
+    header nav {
+        top: 7.5rem
+    }
+}
+
+footer {
+    width: 100%;
+    height: 6.5rem
+}
+
+footer .general__content {
+    margin: 1.5rem auto !important
+}
+
+footer .container__social--footer {
+    width: 6rem;
+    display: inline-block;
+    vertical-align: middle
+}
+
+footer .container__social--footer a {
+    margin: 0 .25rem !important
+}
+
+footer .container__social--footer a img {
+    width: 2rem
+}
+
+footer .container--texts__footer {
+    width: calc(100% - 9.25rem);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    color: #fff
+}
+
+footer .container--texts__footer p {
+    width: 100%
+}
+
+footer .container--texts__footer a {
+    line-height: 2rem;
+    color: #fff
+}
+
+@media screen and (min-width:48rem) {
+    footer {
+        height: 11.2rem
+    }
+    footer .general__content {
+        margin: 3.5rem auto !important
+    }
+    footer .container--texts__footer {
+        width: calc(100% - 21rem)
+    }
+    footer .container__social--footer {
+        width: 20rem
+    }
+    footer .container__social--footer a {
+        margin: 0 .5rem
+    }
+    footer .container__social--footer a img {
+        width: 3.6rem
+    }
+    footer p {
+        width: calc(100% - 20.5rem)
+    }
+}
+
+.hero {
+    min-height: 24rem;
+    margin-top: 8.5rem !important
+}
+
+.hero .general__content {
+    min-height: 24rem
+}
+
+.hero .content--left,
+.hero .content--left__image,
+.hero .content--right,
+.hero .content--right__text {
+    width: 49%;
+    height: 24rem;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.hero .content--left__image {
+    width: 45%
+}
+
+.hero .content--right__text {
+    width: 50%
+}
+
+.hero .content--right {
+    height: 100%;
+    float: right;
+    position: absolute
+}
+
+.hero .container__text--hero {
+    width: 90%;
+    -webkit-height: fit-content;
+    -moz-height: fit-content;
+    -ms-height: fit-content;
+    -o-height: fit-content;
+    height: fit-content;
+    max-width: 26rem;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    z-index: 1
+}
+
+.hero .container__text--hero h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.75rem
+}
+
+.hero .container__text--hero h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35rem
+}
+
+.hero .container__text--hero p {
+    margin: .5rem auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25rem
+}
+
+.hero .container__text--hero .container__button {
+    width: 100%;
+    margin-top: 4.5rem;
+    text-align: center
+}
+
+.hero .container__text--hero .container__button button {
+    width: 12rem
+}
+
+.hero picture {
+    width: auto;
+    height: 85%;
+    position: absolute;
+    bottom: 0
+}
+
+.hero picture img {
+    height: 100%
+}
+
+.hero #slide-4 picture {
+    height: 100%;
+    right: -12rem
+}
+
+@media screen and (min-width:48rem) {
+    .hero {
+        min-height: 44rem;
+        margin-top: 14.5rem !important
+    }
+    .hero .content--left,
+    .hero .content--left__image,
+    .hero .content--right,
+    .hero .content--right__text,
+    .hero .general__content {
+        min-height: 44rem
+    }
+    .hero .container__text--hero {
+        max-width: 35rem
+    }
+    .hero .container__text--hero h1 {
+        font-size: 2.4rem;
+        line-height: 2.75rem
+    }
+    .hero .container__text--hero h3 {
+        font-size: 1.6rem;
+        line-height: 1.85rem
+    }
+    .hero .container__text--hero p {
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        line-height: 1.5rem
+    }
+    .hero .container__text--hero .container__button button {
+        width: 90%
+    }
+}
+
+@media screen and (min-width:64rem) {
+    .hero .container__text--hero {
+        max-width: 45rem
+    }
+    .hero .container__text--hero h1 {
+        font-size: 3.25rem;
+        line-height: 4rem
+    }
+    .hero .container__text--hero h3 {
+        font-size: 2.25rem;
+        line-height: 3rem
+    }
+    .hero .container__text--hero p {
+        margin: 1.4rem auto;
+        font-size: 1.75rem;
+        line-height: 2.25rem
+    }
+    .hero picture {
+        height: 105%
+    }
+}
+
+.benefits {
+    min-height: 55rem
+}
+
+.benefits .bg__stain {
+    width: 100%;
+    height: 100%
+}
+
+.benefits .bg__stain img {
+    width: 20%
+}
+
+.benefits .general__content {
+    padding: 3rem 0 1.5rem
+}
+
+.benefits .container__text--benefits {
+    width: 60%;
+    margin: 2rem 0
+}
+
+.benefits .container__text--benefits .item__text--benfits {
+    position: relative;
+    margin-bottom: 1.6rem
+}
+
+.benefits .container__text--benefits .item__text--benfits h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2rem
+}
+
+.benefits .container__text--benefits .item__text--benfits p {
+    font-size: 1.2rem;
+    line-height: 1.5rem
+}
+
+.benefits .container__text--benefits .item__text--benfits:first-child h3 {
+    font-size: 1.8rem
+}
+
+.benefits .container__text--benefits .item__text--benfits .bg__square {
+    width: 100vw;
+    height: 120%;
+    position: absolute;
+    left: -40vw;
+    top: -10%;
+    background: #f0f812;
+    z-index: -1
+}
+
+.benefits .container__text--benefits .item__text--benfits .bg__square img {
+    width: 10%;
+    position: absolute;
+    right: -3%;
+    bottom: -10%
+}
+
+.benefits picture {
+    width: 35%;
+    max-width: 20rem;
+    position: absolute;
+    right: 0;
+    top: 12rem
+}
+
+.benefits picture img {
+    width: 110%
+}
+
+.benefits .container__button {
+    margin: 5rem auto;
+    text-align: center
+}
+
+.benefits .container__button .cta-button {
+    max-width: 15rem
+}
+
+@media screen and (min-width:30rem) {
+    .benefits picture {
+        width: 32%;
+        top: 20%
+    }
+}
+
+@media screen and (min-width:48rem) {
+    .benefits {
+        min-height: 68rem
+    }
+    .benefits .bg__stain img {
+        width: 15%
+    }
+    .benefits .bg__stain .bg__square {
+        top: 50rem
+    }
+    .benefits .bg__stain .bg__square img {
+        left: 90%;
+        top: 10rem
+    }
+    .benefits .general__content {
+        padding: 4.2rem 0 3rem
+    }
+    .benefits .general__content .container__text--benefits {
+        max-width: 34rem;
+        margin: 9rem 0 3rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits {
+        margin-bottom: 2.4rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits h3 {
+        font-size: 1.8rem;
+        line-height: 2.5rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits p {
+        font-size: 1.4rem;
+        line-height: 2rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits:first-child h3 {
+        font-size: 2.4rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits:first-child p {
+        font-size: 1.6rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits .bg__square {
+        left: -50vw
+    }
+    .benefits .general__content picture {
+        width: 35%;
+        max-width: 30rem;
+        position: absolute;
+        right: 0;
+        top: 22%
+    }
+    .benefits .general__content picture img {
+        width: 110%
+    }
+    .benefits .general__content .container__button {
+        margin: 5rem auto 3rem
+    }
+    .benefits .general__content .container__button .cta-button {
+        max-width: 30rem
+    }
+}
+
+@media screen and (min-width:64rem) {
+    .benefits .general__content {
+        padding: 5rem 0 3.5rem
+    }
+    .benefits .general__content .container__text--benefits {
+        max-width: 40rem;
+        margin: 12rem 0 4rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits {
+        margin-bottom: 3rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits h3 {
+        font-size: 2.5rem;
+        line-height: 3.25rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits p {
+        font-size: 1.75rem;
+        line-height: 2.5rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits:first-child h3 {
+        font-size: 3.25rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits:first-child p {
+        font-size: 2rem
+    }
+    .benefits .general__content .container__text--benefits .item__text--benfits .bg__square {
+        left: -60vw
+    }
+}
+
+.banner__black {
+    min-height: 7rem
+}
+
+.banner__black .general__content {
+    padding: 1.5rem 0
+}
+
+.banner__black .general__content .container__text--banner {
+    width: 49%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.banner__black .general__content .container__text--banner p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff
+}
+
+.banner__black .general__content .container__text--banner p span {
+    font-weight: 900
+}
+
+.banner__black .general__content .container__button {
+    width: 48%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right
+}
+
+.banner__black .general__content .container__button .cta-button {
+    width: 12rem
+}
+
+@media screen and (min-width:30rem) {
+    .banner__black .container__button,
+    .banner__black .container__text--banner {
+        width: 49%
+    }
+    .banner__black .container__text--banner p {
+        font-size: 1.4rem
+    }
+    .banner__black .cta-button {
+        width: 12rem
+    }
+}
+
+@media screen and (min-width:48rem) {
+    .banner__black {
+        min-height: 8rem
+    }
+    .banner__black .general__content p {
+        font-size: 2rem !important;
+        line-height: 2.5rem !important
+    }
+    .banner__black .general__content .cta-button {
+        width: 21rem !important
+    }
+}
+
+@media screen and (min-width:64rem) {
+    .banner__black {
+        min-height: 10rem
+    }
+    .banner__black .general__content .container__text--banner {
+        width: 60rem
+    }
+    .banner__black .general__content .container__text--banner p {
+        font-size: 2.75rem !important;
+        line-height: 3.5rem !important
+    }
+    .banner__black .general__content .container__button {
+        width: 30%
+    }
+}
+
+.style {
+    min-height: 75rem
+}
+
+.style .bg__stain {
+    width: 15%;
+    top: -.1rem
+}
+
+.style .container--title__style {
+    min-height: 18rem
+}
+
+.style .container--title__style h2 {
+    padding: 1.5rem 0 1rem;
+    text-align: center
+}
+
+.style .container--title__style .container__logo--style {
+    width: 100%;
+    text-align: center
+}
+
+.style .container--title__style p {
+    width: 90%;
+    max-width: 58rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 1rem auto
+}
+
+.style .container--icons__style .container__grid--style {
+    width: 100%;
+    position: relative;
+    padding: 4rem 0 0;
+    background: url(../img/style/stroke.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style {
+    width: 49%;
+    height: 17rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4rem;
+    text-align: center
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style:nth-child(2) .bg__stain {
+    left: 60%;
+    top: 96%
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style:nth-child(3) .bg__stain {
+    left: 90%;
+    top: 42%;
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg)
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style:nth-child(4) .bg__stain {
+    left: 25%;
+    top: 10%;
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -ms-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1)
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style:nth-child(5) .bg__stain {
+    left: 55%;
+    top: 90%
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style .bg__stain {
+    z-index: -1
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style .text__grid--style {
+    width: 13rem;
+    margin: 0 auto 2.5rem;
+    padding: .25rem 0 .25rem .5rem;
+    font-size: 1rem;
+    text-align: left;
+    border-left: .9rem solid #f0f812;
+    background: #fff
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style .text__grid--style span {
+    font-weight: 900
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style .img__grid--style {
+    width: 8.8rem;
+    height: 8.8rem;
+    position: relative;
+    margin: 0 auto;
+    border: .7rem solid #000;
+    border-radius: 50%;
+    background: #f0f812
+}
+
+.style .container--icons__style .container__grid--style .item__grid--style .img__grid--style img {
+    width: auto;
+    height: 4.6rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.style .container--icons__style .container__button {
+    margin: 1rem auto;
+    text-align: center
+}
+
+.style .container--icons__style .container__button .cta-button {
+    width: 80%;
+    max-width: 38.5rem;
+    font-size: 2rem
+}
+
+@media screen and (min-width:30rem) {
+    .style .container--icons__style .container__grid--style {
+        background-size: calc(75% - 4rem)
+    }
+}
+
+@media screen and (min-width:36rem) {
+    .style .container--icons__style .container__grid--style {
+        background-size: calc(70% - 4rem)
+    }
+    .style .container--title__style {
+        min-height: 20rem
+    }
+    .style .container--title__style p {
+        width: 80%;
+        font-size: 1.4rem;
+        line-height: 2rem
+    }
+}
+
+@media screen and (min-width:48rem) {
+    .style {
+        min-height: 80rem
+    }
+    .style .container--icons__style {
+        padding: 4rem 0 2rem
+    }
+    .style .container--icons__style .container__grid--style {
+        background-size: calc(55% - 4rem)
+    }
+    .style .container--icons__style .item__grid--style .img__grid--style {
+        width: 10.8rem;
+        height: 10.8rem
+    }
+    .style .container--icons__style .item__grid--style .img__grid--style img {
+        width: 5.5rem;
+        height: 5.5rem
+    }
+    .style .container--title__style {
+        min-height: 23rem
+    }
+    .style .container--title__style h2 {
+        padding: 2rem 0 1rem
+    }
+    .style .container--title__style p {
+        font-size: 1.8rem;
+        line-height: 2.5rem
+    }
+}
+
+@media screen and (min-width:64rem) {
+    .style {
+        min-height: 64rem
+    }
+    .style .container--title__style {
+        min-height: 30rem
+    }
+    .style .container--title__style h2 {
+        padding: 2.5rem 0 1.25rem
+    }
+    .style .container--title__style p {
+        max-width: 65rem;
+        font-size: 2rem;
+        line-height: 3rem
+    }
+    .style .container--icons__style .container__grid--style {
+        padding: 0 0 1rem;
+        background-size: 0
+    }
+    .style .container--icons__style .container__grid--style .item__grid--style {
+        width: 24%;
+        height: 20rem;
+        padding-top: 3rem
+    }
+    .style .container--icons__style .container__grid--style .item__grid--style .text__grid--style {
+        width: 16rem;
+        margin: 1rem auto 3rem;
+        padding-left: 1rem;
+        font-size: 1.3rem;
+        line-height: 2.25rem;
+        text-align: left;
+        border-left: .9rem solid #f0f812
+    }
+    .style .container--icons__style .container__button {
+        margin: 1rem auto 5rem
+    }
+    .style .stroke--desktop {
+        width: 70%;
+        position: absolute;
+        margin: auto;
+        top: 65%;
+        left: 0;
+        right: 0;
+        border: 2px dashed #000
+    }
+}
+
+.form {
+    padding: 3.5rem 0 8rem;
+    min-height: 66rem
+}
+
+.form h2 {
+    width: 25rem
+}
+
+.form h2 .accent {
+    top: -.5rem;
+    left: 7rem
+}
+
+.form p {
+    width: 85%;
+    max-width: 60rem;
+    position: relative;
+    margin: 2rem auto 3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2rem
+}
+
+.form p span {
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 3rem
+}
+
+.form form {
+    margin: 2rem auto
+}
+
+.form form .form__field {
+    width: 85%;
+    max-width: 60rem;
+    position: relative;
+    margin: 0 auto 1rem
+}
+
+.form form .form__field label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1.75rem;
+    margin: 2rem 0 1rem
+}
+
+.form form .form__field input,
+.form form .form__field select {
+    height: 5.5rem;
+    padding: 0 1rem;
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    -webkit-word-break: normal;
+    -moz-word-break: normal;
+    -ms-word-break: normal;
+    -o-word-break: normal;
+    word-break: normal;
+    color: #000;
+    background: rgba(255, 255, 255, .4)
+}
+
+.form form .form__field input {
+    width: calc(100% - 2rem)
+}
+
+.form form .form__field select {
+    width: 100%;
+    background-image: url(../img/general/arrow_down.svg);
+    background-repeat: no-repeat;
+    background-position: 95%
+}
+
+.form form .form__field .age--form__inputs {
+    width: 100%;
+    position: relative
+}
+
+.form form .form__field .age--form__inputs .age--form__input {
+    width: 32.5%;
+    position: relative;
+    display: inline-block
+}
+
+.form form .form__field .age--form__inputs .age--form__input input {
+    width: 80%;
+    border: 0;
+    text-align: center
+}
+
+.form form .form__field #alert-form {
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e0655f
+}
+
+.form form #container--input__city {
+    opacity: .5
+}
+
+.form form input[type=submit] {
+    max-width: 20rem;
+    font-size: 1.75rem;
+    opacity: .5
+}
+
+.form .container__button,
+.form .container__terms {
+    width: 85%;
+    max-width: 60rem;
+    margin: 2rem auto 1rem
+}
+
+.form .container__terms {
+    text-align: right
+}
+
+.form .container__terms label {
+    font-weight: 700
+}
+
+.form .container__terms label a {
+    color: #000
+}
+
+.form .container__disclaimer {
+    width: 100%;
+    max-width: 76rem;
+    margin: 3rem auto 2rem
+}
+
+.form .container__disclaimer p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: justify
+}
+
+.form .container__disclaimer p a {
+    color: #000
+}
+
+.form .container__button {
+    width: 50%;
+    font-size: 2rem;
+    text-align: center
+}
+
+.form .mail__to {
+    width: 85%;
+    max-width: 60rem;
+    position: relative;
+    margin: 2rem auto;
+    font-size: 1.2rem
+}
+
+.form .mail__to a {
+    font-weight: 700;
+    color: #000
+}
+
+@media screen and (min-width:48rem) {
+    .form {
+        padding: 5.5rem 0 4rem;
+        min-height: 70rem
+    }
+    .form h2 {
+        width: 38rem
+    }
+    .form h2 .accent {
+        top: -.75rem;
+        left: 10.5rem
+    }
+    .form p {
+        font-size: 1.8rem;
+        line-height: 2.5rem
+    }
+    .form p span {
+        font-size: 2.25rem;
+        line-height: 3.75rem
+    }
+}
+
+@media screen and (min-width:64rem) {
+    .form {
+        padding: 7rem 0 5rem;
+        min-height: 75rem
+    }
+    .form h2 {
+        width: 51rem
+    }
+    .form h2 .accent {
+        top: -1rem;
+        left: 14rem
+    }
+    .form form {
+        margin: 2rem auto
+    }
+    .form form .form__field {
+        margin: 0 auto 1.25rem
+    }
+    .form form .form__field label {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 2.5rem 0 1.25rem
+    }
+    .form form #alert-form {
+        font-size: 1.25rem
+    }
+}
+
+.banner__white {
+    min-height: 10rem
+}
+
+.banner__white h3 {
+    padding: 3.5rem 0;
+    font-size: 2.4rem;
+    font-weight: 900;
+    text-align: center;
+    color: #000
+}
+
+@media screen and (min-width:48rem) {
+    .banner__white {
+        min-height: 8rem
+    }
+    .banner__white h3 {
+        font-size: 4.4rem
+    }
+}
+
+@media screen and (min-width:48rem) {
+    .banner__white h3 {
+        font-size: 5rem
+    }
+}
+
+.typ header {
+    height: 60px
+}
+
+.typ header .container__logo--header {
+    z-index: 2
+}
+
+.typ header .item--header {
+    height: 60px;
+    margin: 0;
+    vertical-align: top
+}
+
+.typ header .container__logo--header img {
+    width: 8rem;
+    margin-top: 6px
+}
+
+.typ header .container__social--header {
+    height: 60px;
+    margin-top: 10px
+}
+
+#thank__you--page {
+    height: auto;
+    min-height: calc(100vh - 14rem);
+    position: relative;
+    padding-top: 3rem
+}
+
+#thank__you--page .general__container,
+#thank__you--page .general__content {
+    height: auto;
+    min-height: calc(100vh - 14rem)
+}
+
+#thank__you--page .thank__you--page {
+    width: 85%;
+    max-width: 56rem;
+    height: 30rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center
+}
+
+#thank__you--page .thank__you--page .thank__you--text {
+    margin: 1rem auto;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 6rem
+}
+
+#thank__you--page .thank__you--page .thank__you--msg {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem
+}
+
+#thank__you--page .thank__you--page .thank__you--rock {
+    margin: 5rem auto;
+    font-family: third_rail_-_demoregular;
+    font-size: 9rem
+}
+
+@media screen and (min-width:48rem) {
+    #thank__you--page {
+        min-height: calc(100vh - 17rem)
+    }
+    #thank__you--page .general__container,
+    #thank__you--page .general__content {
+        height: auto;
+        min-height: calc(100vh - 17rem)
+    }
+    #thank__you--page .thank__you--page {
+        height: 35rem
+    }
+    #thank__you--page .thank__you--page .thank__you--text {
+        margin: 2rem auto;
+        font-size: 7rem;
+        line-height: 9rem
+    }
+    #thank__you--page .thank__you--page .thank__you--rock {
+        font-size: 12rem;
+        line-height: 14rem
+    }
+}

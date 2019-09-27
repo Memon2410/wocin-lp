@@ -29,6 +29,7 @@ export default class Register {
     const select = document.getElementById('input-state')
     const selectCity = document.getElementById('input-city')
     const inputs = document.querySelectorAll('input[type=number]')
+    const tyc = document.getElementById('terms')
 
     let selectBoolean = false
     let selectCityBoolean = false
@@ -36,6 +37,7 @@ export default class Register {
     let emailBoolean = false
     let phoneBoolean = false
     let dateBoolean = false
+    let tycBoolean = false
 
     let birthDay
     let age = null
@@ -54,13 +56,19 @@ export default class Register {
     submitBtn.disabled = true
 
     const checkSubmit = () => {
-      if (selectBoolean && selectCityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean) {
+      if (selectBoolean && selectCityBoolean && dateBoolean && nameBoolean && emailBoolean && phoneBoolean && tycBoolean) {
         submitBtn.disabled = false
         submitBtn.style.opacity = '1'
       } else {
         submitBtn.disabled = true
         submitBtn.style.opacity = '0.5'
       }
+    }
+
+    // T y C [Checkbox]
+    tyc.onchange = (event) => {
+      tycBoolean = !tycBoolean
+      checkSubmit()
     }
 
     // Selects
@@ -71,7 +79,7 @@ export default class Register {
       setTimeout(() => {
         select.style.color = '#000'
         that.auxiliar.addOptions(that.cities[event.target.value], selectCity)
-        document.getElementById('container--input__city').style.display = 'block'
+        document.getElementById('container--input__city').style.opacity = '1'
         selectBoolean = true
         checkSubmit()
       }, 250)

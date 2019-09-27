@@ -1,12 +1,40 @@
+.typ {
+	header {
+		height: 60px;
+
+		.container__logo--header {
+			z-index: 2;
+		}
+
+		.item--header {
+			height: 60px;
+		    margin: 0px;
+		    vertical-align: top;
+		}
+
+		.container__logo--header {
+			img {
+				width: 8rem;
+    			margin-top: 6px;
+			}
+		}
+		.container__social--header {
+			height: 60px;
+    		margin-top: 10px;
+		}
+	}
+}
+
 #thank__you--page {
 	height: auto;
-	min-height: calc(100vh - 17rem);
+	min-height: calc(100vh - 14rem);
 	position: relative;
+	padding-top: 3rem;
 
 	.general__container,
 	.general__content {
 		height: auto;
-		min-height: calc(100vh - 17rem);
+		min-height: calc(100vh - 14rem);
 	}
 
 	.thank__you--page {
@@ -44,12 +72,12 @@
 
 @media screen and (min-width: 48rem) {
 	#thank__you--page {
-		min-height: calc(100vh - 20rem);
+		min-height: calc(100vh - 17rem);
 
 		.general__container,
 		.general__content {
 			height: auto;
-			min-height: calc(100vh - 20rem);
+			min-height: calc(100vh - 17rem);
 		}
 
 		.thank__you--page {

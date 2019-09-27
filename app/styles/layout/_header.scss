@@ -19,6 +19,7 @@ header {
         width: 3.2rem;
         text-align: left;
         cursor: pointer;
+        margin-top: 2.5rem;
 
         span {
             width: 2.25rem;
@@ -27,9 +28,6 @@ header {
             display: block;
             background: $BLACK;
 
-            &:first-child {
-                margin-top: 2.5rem;
-            }
             &:nth-child(2) {
                 margin: 0.3rem 0;
             }
@@ -74,9 +72,13 @@ header {
                 width: 14rem;
                 height: 3.5rem;
                 text-align: center;
+
+                &:first-child {
+                    padding-top: 1rem;
+                }
                 a {
                     width: 12.5rem;
-                    padding: 0.5rem;
+                    padding: 1rem 0.5rem;
                     font-size: 1.4rem;
                     text-align: center;
                     text-decoration: none;

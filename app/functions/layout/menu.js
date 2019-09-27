@@ -13,18 +13,32 @@ export default class Menu {
       }
     }
 
-    document.onscroll = (event) => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    const resizeHeader = () => {
+      let scrollPos = typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
+      let originalSize = window.innerWidth > 768 ? 145 : 85
+      let sizeLogo = window.innerWidth > 768 ? 178 : 120
+      let topLogo = window.innerWidth > 768 ? 30 : 0
 
-      scrollTop > 175 ? this.scrollBtn.style.display = 'block' : this.scrollBtn.style.display = 'none'
+      if (scrollPos > 50) {
+        document.getElementsByTagName('header')[0].style.height = '60px'
+        document.getElementsByClassName('item--header')[0].style.height = '60px'
+        document.getElementsByClassName('item--header')[0].style.margin = '0'
+        document.getElementsByClassName('item--header')[0].style.verticalAlign = 'top'
+        document.getElementsByClassName('item--header')[1].style.height = '60px'
+        document.getElementsByClassName('container__social--header')[0].style.marginTop = '10px'
+        document.getElementsByClassName('logo--header')[0].style.width = '8rem'
+        document.getElementsByClassName('logo--header')[0].style.marginTop = '6px'
+      } else {
+        document.getElementsByTagName('header')[0].style.height = originalSize + 'px'
+        document.getElementsByClassName('item--header')[0].style.height = originalSize + 'px'
+        document.getElementsByClassName('item--header')[0].style.margin = '1rem 0'
+        document.getElementsByClassName('item--header')[0].style.verticalAlign = 'middle'
+        document.getElementsByClassName('item--header')[1].style.height = originalSize + 'px'
+        document.getElementsByClassName('container__social--header')[0].style.marginTop = '30px'
+        document.getElementsByClassName('logo--header')[0].style.width = sizeLogo + 'px'
+        document.getElementsByClassName('logo--header')[0].style.marginTop = topLogo + 'px'
+      }
     }
-
-    this.scrollBtn.addEventListener('click', () => {
-      window.scroll({
-        top: 0,
-        behavior: 'smooth'
-      })
-    })
 
     const checkUserIE = () => {
       const ua = window.navigator.userAgent
@@ -75,5 +89,20 @@ export default class Menu {
     }
 
     checkUserIE()
+
+    this.scrollBtn.addEventListener('click', () => {
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      })
+    })
+    document.onscroll = (event) => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      scrollTop > 175 ? this.scrollBtn.style.display = 'block' : this.scrollBtn.style.display = 'none'
+      resizeHeader()
+    }
+    window.onresize = (event) => {
+      resizeHeader()
+    }
   }
 }

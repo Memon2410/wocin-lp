@@ -10,6 +10,22 @@
         }
     }
 
+    p {
+        width: 85%;
+        max-width: 60rem;
+        position: relative;
+        margin: 2rem auto 3rem;
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 2rem;
+
+        span {
+            font-size: 1.75rem;
+            font-weight: 900;
+            line-height: 3rem;
+        }
+    }
+
     form {
         margin: 2rem auto;
 
@@ -76,7 +92,7 @@
         }
 
         #container--input__city {
-            display: none;
+            opacity: 0.5;
         }
 
         input[type=submit] {
@@ -90,13 +106,33 @@
     .container__button {
         width: 85%;
         max-width: 60rem;
-        margin: 2rem auto 1rem
+        margin: 2rem auto 1rem;
     }
 
     .container__terms {
         text-align: right;
         label {
             font-weight: 700;
+
+            a {
+                color: $BLACK;
+            }
+        }
+    }
+
+    .container__disclaimer {
+        width: 100%;
+        max-width: 76rem;
+        margin: 3rem auto 2rem;
+
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-align: justify;
+
+            a {
+                color: $BLACK;
+            }
         }
     }
 
@@ -104,6 +140,19 @@
         width: 50%;
         font-size: 2rem;
         text-align: center;
+    }
+
+    .mail__to {
+        width: 85%;
+        max-width: 60rem;
+        position: relative;
+        margin: 2rem auto;
+        font-size: 1.2rem;
+
+        a {
+            font-weight: 700;
+            color: $BLACK;
+        }
     }
 }
 
@@ -117,6 +166,16 @@
             .accent {
                 top: -0.75rem;
                 left: 10.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+
+            span {
+                font-size: 2.25rem;
+                line-height: 3.75rem;
             }
         }
     }

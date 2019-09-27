@@ -93,7 +93,7 @@ h2 {
 input[type=submit] {
     width: 80%;
     max-width: 30rem;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     border-radius: 0.3rem;
     border: 0;
     font-weight: 900;
@@ -126,6 +126,13 @@ input[type=submit] {
     }
     .top {
         @include prefix(transform, rotate(-135deg));
+    }
+}
+
+@media screen and (min-width: 24rem) {
+    .cta-button,
+    input[type=submit] {
+        padding: 1rem;
     }
 }
 
